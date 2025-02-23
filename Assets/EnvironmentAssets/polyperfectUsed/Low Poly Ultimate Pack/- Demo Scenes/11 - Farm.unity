@@ -78720,7 +78720,7 @@ MonoBehaviour:
   RotationThreshold: 60
   CollisionLayerCamera:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 0
   InfoUnit: {fileID: 1403319133}
 --- !u!1001 &1599754250
 PrefabInstance:
@@ -103876,7 +103876,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1942573603}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.48148143
+  m_Size: 0.4814815
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
