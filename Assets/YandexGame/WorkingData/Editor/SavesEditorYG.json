@@ -1,0 +1,28 @@
+{
+    "idSave": 161,
+    "isFirstSession": false,
+    "language": "ru",
+    "promptDone": false,
+    "money": 1,
+    "newPlayerName": "Hello!",
+    "openLevels": [
+        false,
+        true,
+        false
+    ],
+    "RewardData": {
+        "LastTime": "27.02.2025 0:00:00",
+        "AllRewards": 7,
+        "TakeCount": 1,
+        "NotakeCount": 0,
+        "Rewards": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    }
+}
