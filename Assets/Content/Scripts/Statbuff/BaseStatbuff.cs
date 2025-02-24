@@ -16,6 +16,11 @@ namespace Assets.Content.Scripts.Statbuff
             Deactivate();
         }
 
+        public void SetValue(float newValue)
+        {
+            value = newValue;
+        }
+
         public virtual void Active() { }
         public virtual void Deactivate() { }
     }
