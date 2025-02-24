@@ -7,12 +7,14 @@ namespace Assets.Content.Scripts.Statbuff
         public override void Active()
         {
             base.Active();
+            UnitController.Instance.MaxHealthPlayer += value;
             UnitController.Instance.CurrentHealthPlayer += value;
         }
 
         public override void Deactivate()
         {
             base.Deactivate();
+            UnitController.Instance.MaxHealthPlayer -= value;
             UnitController.Instance.CurrentHealthPlayer -= value;
         }
     }

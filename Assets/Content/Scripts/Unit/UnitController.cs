@@ -28,7 +28,7 @@ namespace Assets.Content.Scripts.Unit
 
         public static UnitController Instance { get; private set; } = null;
 
-        private void Start()
+        private void Awake()
         {
             if (Instance != null)
             {
@@ -96,7 +96,7 @@ namespace Assets.Content.Scripts.Unit
 
             if (verticalInput == 0 && horizontalInput == 0)
             {
-                _unitRb.velocity = new Vector3(_unitRb.velocity.x, _unitRb.velocity.y, 0);
+                _unitRb.velocity = new Vector3(0, _unitRb.velocity.y, 0);
             }
         }
 

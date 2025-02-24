@@ -1,5 +1,8 @@
 ﻿
+using Assets.Content.Scripts.Player;
 using Assets.Content.Scripts.UI;
+using Assets.Content.Scripts.UI.Weak;
+using System.Collections.Generic;
 
 namespace YG
 {
@@ -20,6 +23,22 @@ namespace YG
 
         // Ваши сохранения
         public RewardData RewardData = new() { Rewards = new RewardType[7], AllRewards = 7 };
+        public List<PlayerUnit> OpenUnit = new List<PlayerUnit>();
+        public List<int> ItemsEquipment = new List<int>();
+        public List<InventoryWeakItemType> ItemTypes = new List<InventoryWeakItemType>();
+        public List<int> Chests = new List<int>();
+        public List<Items> Items = new List<Items>();
+        public float Money;
+        public float Score;
+        public float NeedScore;
+        public float CurrentScore;
+        public int CurrentLevel;
+        public int NeedLevel = 1;
+        public int CurrentIdPlayer;
+
+        public float MaxHealthPlayer = 100;
+        public float CurrentHealthPlayer = 100;
+        public float DamagePlayer = 50;
         // ...
 
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны

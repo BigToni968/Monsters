@@ -26,11 +26,14 @@ namespace Assets.Content.Scripts.UI
         [SerializeField] private Sprite[] autoAttackSprites;
         [SerializeField] private WindowLuckySpin _windowLuckySpin;
         [SerializeField] private WindowDailyReward _windowDailyReward;
+        [SerializeField] private WindowInventory _windowInventory;
         [SerializeField] private WindowGift _windowGift;
         [SerializeField] private UINotification[] _uiNotifications;
         [SerializeField] private Transform _homePoint;
         [SerializeField] private Transform _unitController;
+        [SerializeField] private Canvas[] _allCanvas;
 
+        public int CurrentIdPlayer;
 
         [SerializeField] public static MainUI Instance { get; private set; }
 
@@ -45,6 +48,7 @@ namespace Assets.Content.Scripts.UI
             {
                 Instance = this;
             }
+            Load();
         }
 
         private void Update()
@@ -61,11 +65,34 @@ namespace Assets.Content.Scripts.UI
         
         private void Start()
         {
-            ResetLevelScore(500);
             SetTextLevel();
+            
             _windowLuckySpin.OnUpdate += UpdateSpin;
             _windowGift.OnUpdate += UpdateGifts;
             CheckDailyReward();
+        }
+
+        private void Load()
+        {
+            YandexGame.LoadProgress();
+            Money = YandexGame.savesData.Money;
+            Score = YandexGame.savesData.Score;
+            NeedLevel = YandexGame.savesData.NeedLevel;
+            CurrentLevel = YandexGame.savesData.CurrentLevel;
+            NeedScore = YandexGame.savesData.NeedScore;
+            CurrentScore = YandexGame.savesData.CurrentScore;
+            CurrentIdPlayer = YandexGame.savesData.CurrentIdPlayer;
+        }
+
+        private void Save()
+        {
+            YandexGame.savesData.Money = Money;
+            YandexGame.savesData.Score = Score;
+            YandexGame.savesData.NeedLevel = NeedLevel;
+            YandexGame.savesData.CurrentLevel = CurrentLevel;
+            YandexGame.savesData.CurrentScore = CurrentScore;
+            YandexGame.savesData.NeedScore = NeedScore;
+            YandexGame.SaveProgress();
         }
 
         public void ResetLevelScore(float needScore)
@@ -82,6 +109,7 @@ namespace Assets.Content.Scripts.UI
                 NeedLevel++;
                 _scoreSlider.maxValue = needScore;
                 _scoreSlider.minValue = 0;
+                SetTextLevel();
             }
         }
 
@@ -95,6 +123,7 @@ namespace Assets.Content.Scripts.UI
             CurrentScore += score;
             _upgradeManager.Upgrade();
             SetTextLevel();
+            Save();
         }
 
         public void SetTextLevel()
@@ -103,6 +132,8 @@ namespace Assets.Content.Scripts.UI
             _scoreText.SetText($"{new IdleCurrency(CurrentScore).ToShortString()}/{new IdleCurrency(NeedScore).ToShortString()} ({Mathf.RoundToInt(percent)}%)");
             _currentLevelText.SetText($"Уровень {CurrentLevel}");
             _futureLevelText.SetText($"Уровень {NeedLevel}");
+            _scoreSlider.maxValue = NeedScore;
+            _scoreSlider.minValue = 0;
             _scoreSlider.value = CurrentScore;
             _moneyText.SetText($"{Money}");
         }
@@ -168,6 +199,18 @@ namespace Assets.Content.Scripts.UI
             _windowGift.OnUpdate -= UpdateGifts;
             _windowDailyReward.OnUpdateReward -= UpdateDailyReward;
             _windowLuckySpin.OnUpdate -= UpdateSpin;
+        }
+
+        public bool IsCanvasEnable()
+        {
+            return _allCanvas[0].enabled || _allCanvas[1].enabled || _allCanvas[2].enabled || _allCanvas[3].enabled || _allCanvas[4].enabled || _allCanvas[5].enabled;
+        }
+
+        public void ChangeMoney(float money)
+        {
+            Money += money;
+            Money = Mathf.Clamp(Money, 0, float.MaxValue);
+            _moneyText.SetText($"{Money}");
         }
     }
 }

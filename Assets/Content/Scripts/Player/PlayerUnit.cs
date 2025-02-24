@@ -11,32 +11,24 @@ namespace Assets.Content.Scripts.Player
 {
     public class PlayerUnit : MonoBehaviour, IUnit
     {
-        [SerializeField] private UnitController _unitController;
-        [SerializeField] private Animator _animator;
         [SerializeField] private DamageBox _damageBox;
         [SerializeField] private Transform _spawnPoint;
         [SerializeField] private float _delayRelax;
         [SerializeField] private int _index;
         [SerializeField] private Transform _unit;
+        [SerializeField] private MeshRenderer _meshRenderer;
+        [SerializeField] private BoxCollider _boxCollider;
 
-        public MainUI UI;
+        public Animator Animator;
         public ModelUnit Model;
         public bool _autoAttack = false;
+        public Sprite Sprite;
 
         private bool _takeDamage = false;
-        private bool _isOpen = false;
         private Coroutine _coroutineRelax;
 
         private void Start()
         {
-            if(!_isOpen)
-            {
-                _isOpen = true;
-                _unitController.MaxHealthPlayer += Model.Health;
-                _unitController.DamagePlayer += Model.Damage;
-            }           
-            _unitController.CurrentHealthPlayer = _unitController.MaxHealthPlayer;
-
             StartCoroutine(Regeneration());
         }
 
@@ -48,15 +40,16 @@ namespace Assets.Content.Scripts.Player
 
         private void Attack()
         {
+            if (MainUI.Instance.IsCanvasEnable()) return;
             if (Input.GetMouseButtonDown(0) || MainUI.Instance.AutoAttack)
             {
-                _animator.SetTrigger("IsAttack");
+                Animator.SetTrigger("IsAttack");
             }
         }
 
         public void ActivateDamageBox()
         {
-            _damageBox.SetDamage(_unitController.DamagePlayer);
+            _damageBox.SetDamage(UnitController.Instance.DamagePlayer);
             _damageBox.gameObject.SetActive(true);
         }
 
@@ -69,10 +62,10 @@ namespace Assets.Content.Scripts.Player
             }
 
             _takeDamage = true;
-            _unitController.CurrentHealthPlayer -= damage;
-            _unitController.CurrentHealthPlayer = Mathf.Clamp(_unitController.CurrentHealthPlayer, 0, _unitController.MaxHealthPlayer);
-            _unitController.InfoUnit.ShowHealth();
-            if (_unitController.CurrentHealthPlayer <= 0)
+            UnitController.Instance.CurrentHealthPlayer -= damage;
+            UnitController.Instance.CurrentHealthPlayer = Mathf.Clamp(UnitController.Instance.CurrentHealthPlayer, 0, UnitController.Instance.MaxHealthPlayer);
+            UnitController.Instance.InfoUnit.ShowHealth();
+            if (UnitController.Instance.CurrentHealthPlayer <= 0)
             {
                 Death();
             }
@@ -80,7 +73,7 @@ namespace Assets.Content.Scripts.Player
 
         private void Death()
         {
-            _unitController.CurrentHealthPlayer = _unitController.MaxHealthPlayer;
+            UnitController.Instance.CurrentHealthPlayer = UnitController.Instance.MaxHealthPlayer;
             _unit.position = _spawnPoint.position;
         }
 
@@ -98,12 +91,12 @@ namespace Assets.Content.Scripts.Player
                 if (!_takeDamage)
                 {
                     yield return new WaitForSeconds(1);
-                    _unitController.CurrentHealthPlayer += Model.Regeneration;
-                    _unitController.CurrentHealthPlayer = Mathf.Clamp(_unitController.CurrentHealthPlayer, 0, _unitController.MaxHealthPlayer);             
+                    UnitController.Instance.CurrentHealthPlayer += Model.Regeneration;
+                    UnitController.Instance.CurrentHealthPlayer = Mathf.Clamp(UnitController.Instance.CurrentHealthPlayer, 0, UnitController.Instance.MaxHealthPlayer);
                 }
-                if (_unitController.CurrentHealthPlayer >= _unitController.MaxHealthPlayer)
+                if (UnitController.Instance.CurrentHealthPlayer >= UnitController.Instance.MaxHealthPlayer)
                 {
-                    _unitController.InfoUnit.HideHealth();
+                    UnitController.Instance.InfoUnit.HideHealth();
                 }
                 yield return null;
             }
@@ -111,13 +104,26 @@ namespace Assets.Content.Scripts.Player
 
         private void SetRelax()
         {
-            if (_unitController.CurrentHealthPlayer < _unitController.MaxHealthPlayer)
+            if (UnitController.Instance.CurrentHealthPlayer < UnitController.Instance.MaxHealthPlayer)
             {
                 if (_coroutineRelax == null)
                 {
                     _coroutineRelax = StartCoroutine(TimerRelax());
                 }
             }
+        }
+
+        public void Deactivate()
+        {
+            _meshRenderer.enabled = false;
+            _boxCollider.enabled = false;
+            enabled = false;
+        }
+        public void Activate()
+        {
+            _meshRenderer.enabled = true;
+            _boxCollider.enabled = true;
+            enabled = true;
         }
     }
 

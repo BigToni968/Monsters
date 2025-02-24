@@ -127,12 +127,13 @@ MonoBehaviour:
   _delayRelax: 0
   _index: 0
   _unit: {fileID: 0}
+  UI: {fileID: 0}
   Model:
     Health: 200
     Damage: 50
     Regeneration: 0
   _autoAttack: 0
-  _health: 0
+  Sprite: {fileID: 0}
 --- !u!1001 &3319098991054709743
 PrefabInstance:
   m_ObjectHideFlags: 0
