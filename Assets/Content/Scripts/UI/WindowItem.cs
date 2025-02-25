@@ -45,11 +45,9 @@ namespace Assets.Content.Scripts.UI
     }
     public enum TypeItems
     {
-        X2Exp2,
-        X2Exp5,
-        X2Damage2,
-        X2Damage5,
-        X2Gold2,
-        X2Gold5,
+        Exp,
+        Damage,
+        Gold,
+
     }
 }
