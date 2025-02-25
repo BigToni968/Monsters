@@ -57,6 +57,7 @@ MonoBehaviour:
   _typeItems: 4
   Price: 300
   Value: 2
+  Index: 2
 --- !u!222 &3823625960889477114
 CanvasRenderer:
   m_ObjectHideFlags: 0

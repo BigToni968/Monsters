@@ -11,27 +11,36 @@ namespace Assets.Content.Scripts.UI
         [field: SerializeField] public List<Items> Items { get; private set; } = new List<Items>();
 
         [SerializeField] private Transform _contentItems;
+        [SerializeField] private Items[] _items;
+
         private void Start()
         {
             Load();
         }
 
-        private void Save()
+        private void Save(int index)
         {
-            YandexGame.savesData.Items = Items;
+            YandexGame.savesData.Items.Add(_items[index].Index);
             YandexGame.SaveProgress();
         }
         public void Load()
         {
             YandexGame.LoadProgress();
-            Items = YandexGame.savesData.Items;
+            for (int i = 0; i < YandexGame.savesData.Items.Count; i++)
+            {
+                LoadChest(_items[YandexGame.savesData.Items[i]]);
+            }
         }
-
+        private void LoadChest(Items item)
+        {
+            Items items = Instantiate(item, _contentItems);
+            Items.Add(items);
+        }
         public void AddItem(Items item)
         {
             Items items = Instantiate(item, _contentItems);
             Items.Add(items);
-            Save();
+            Save(items.Index);
         }
     }
     public enum TypeItems

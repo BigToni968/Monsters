@@ -188,7 +188,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc0126b5edc46ec42adc92b62282afc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeChest: 2
   _items: []
   _uiWeakItem: []
   _uIGolds:
@@ -198,6 +197,8 @@ MonoBehaviour:
   - {fileID: 734876675435513326, guid: e567c66ae4c5b8a4c8f1a63937c08d3f, type: 3}
   - {fileID: 886523745534839126, guid: 823d83dbccdf2bc46898a1c69f747f14, type: 3}
   - {fileID: 6106515578862726940, guid: 021ac9354f78b574a874095d5f57319a, type: 3}
+  TypeChest: 2
+  Button: {fileID: 2438332054150072329}
   Index: 1
   Price: 50
 --- !u!222 &4567747927624555939

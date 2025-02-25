@@ -58,7 +58,7 @@ MonoBehaviour:
   IndexItems: 0
   Type: 2
   IsBusy: 0
-  Value: 15
+  Value: 0.15
   Price: 0
   Image: {fileID: 2476128740656973977}
   IndexForSpawn: 4

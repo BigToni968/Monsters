@@ -36,33 +36,33 @@ namespace Assets.Content.Scripts.UI.Weak
             {
                 case InventoryWeakItemType.Health:
                     OnDress(type, id);
-                    HealthStatBuff StatBuff = UnitController.Instance.gameObject.AddComponent<HealthStatBuff>();
-                    StatBuff.SetValue(_windowInventory.ItemsEquipment[id].Value);
-                    StatBuff.Active();
+                    HealthStatBuff healthStatBuff = UnitController.Instance.gameObject.AddComponent<HealthStatBuff>();
+                    healthStatBuff.SetValue(_windowInventory.ItemsEquipment[id].Value);
+                    healthStatBuff.Active();
                     break;
                 case InventoryWeakItemType.Damage:
                     OnDress(type, id);
-                    //HealthStatBuff StatBuff = UnitController.Instance.gameObject.AddComponent<HealthStatBuff>();
-                    //StatBuff.SetValue(_windowInventory.ItemsEquipment[id].Value);
-                    //StatBuff.Active();
+                    DamageStatBuff DamageStatBuff = UnitController.Instance.gameObject.AddComponent<DamageStatBuff>();
+                    DamageStatBuff.SetValue(_windowInventory.ItemsEquipment[id].Value);
+                    DamageStatBuff.Active();
                     break;
                 case InventoryWeakItemType.Speed:
                     OnDress(type, id);
-                    //HealthStatBuff StatBuff = UnitController.Instance.gameObject.AddComponent<HealthStatBuff>();
-                    //StatBuff.SetValue(_windowInventory.ItemsEquipment[id].Value);
-                    //StatBuff.Active();
+                    SpeedStatBuff speedStatBuff = UnitController.Instance.gameObject.AddComponent<SpeedStatBuff>();
+                    speedStatBuff.SetValue(_windowInventory.ItemsEquipment[id].Value);
+                    speedStatBuff.Active();
                     break;
                 case InventoryWeakItemType.Exp:
                     OnDress(type, id);
-                    //HealthStatBuff StatBuff = UnitController.Instance.gameObject.AddComponent<HealthStatBuff>();
-                    //StatBuff.SetValue(_windowInventory.ItemsEquipment[id].Value);
-                    //StatBuff.Active();
+                    ExpStatsBuff expStatsBuff = UnitController.Instance.gameObject.AddComponent<ExpStatsBuff>();
+                    expStatsBuff.SetValue(_windowInventory.ItemsEquipment[id].Value);
+                    expStatsBuff.Active();
                     break;
                 case InventoryWeakItemType.Gold:
                     OnDress(type, id);
-                    //HealthStatBuff StatBuff = UnitController.Instance.gameObject.AddComponent<HealthStatBuff>();
-                    //StatBuff.SetValue(_windowInventory.ItemsEquipment[id].Value);
-                    //StatBuff.Active();
+                    GoldStatBuff goldStatBuff = UnitController.Instance.gameObject.AddComponent<GoldStatBuff>();
+                    goldStatBuff.SetValue(_windowInventory.ItemsEquipment[id].Value);
+                    goldStatBuff.Active();
                     break;
 
             }
@@ -79,23 +79,23 @@ namespace Assets.Content.Scripts.UI.Weak
                     break;
                 case InventoryWeakItemType.Damage:
                     OnUndress(id, type);
-                    //UnitController.Instance.gameObject.TryGetComponent(out HealthStatBuff health);
-                    //Destroy(health);
+                    UnitController.Instance.gameObject.TryGetComponent(out DamageStatBuff damage);
+                    Destroy(damage);
                     break;
                 case InventoryWeakItemType.Speed:
                     OnUndress(id, type);
-                    //UnitController.Instance.gameObject.TryGetComponent(out HealthStatBuff health);
-                    //Destroy(health);
+                    UnitController.Instance.gameObject.TryGetComponent(out SpeedStatBuff speed);
+                    Destroy(speed);
                     break;
                 case InventoryWeakItemType.Exp:
                     OnUndress(id, type);
-                    //UnitController.Instance.gameObject.TryGetComponent(out HealthStatBuff health);
-                    //Destroy(health);
+                    UnitController.Instance.gameObject.TryGetComponent(out ExpStatsBuff exp);
+                    Destroy(exp);
                     break;
                 case InventoryWeakItemType.Gold:
                     OnUndress(id, type);
-                    //UnitController.Instance.gameObject.TryGetComponent(out HealthStatBuff health);
-                    //Destroy(health);
+                    UnitController.Instance.gameObject.TryGetComponent(out GoldStatBuff gold);
+                    Destroy(gold);
                     break;
             }
         }
@@ -198,15 +198,27 @@ namespace Assets.Content.Scripts.UI.Weak
                                     break;
                                 case InventoryWeakItemType.Damage:
                                     LoadDress(k, i, InventoryWeakItemType.Damage);
+                                    DamageStatBuff DamageStatBuff = UnitController.Instance.gameObject.AddComponent<DamageStatBuff>();
+                                    DamageStatBuff.SetValue(_windowInventory.ItemsEquipment[k].Value);
+                                    DamageStatBuff.Active();
                                     break;
                                 case InventoryWeakItemType.Speed:
                                     LoadDress(k, i, InventoryWeakItemType.Speed);
+                                    SpeedStatBuff speedStatBuff = UnitController.Instance.gameObject.AddComponent<SpeedStatBuff>();
+                                    speedStatBuff.SetValue(_windowInventory.ItemsEquipment[k].Value);
+                                    speedStatBuff.Active();
                                     break;
                                 case InventoryWeakItemType.Exp:
                                     LoadDress(k, i, InventoryWeakItemType.Exp);
+                                    ExpStatsBuff expStatsBuff = UnitController.Instance.gameObject.AddComponent<ExpStatsBuff>();
+                                    expStatsBuff.SetValue(_windowInventory.ItemsEquipment[k].Value);
+                                    expStatsBuff.Active();
                                     break;
                                 case InventoryWeakItemType.Gold:
                                     LoadDress(k, i, InventoryWeakItemType.Gold);
+                                    GoldStatBuff goldStatBuff = UnitController.Instance.gameObject.AddComponent<GoldStatBuff>();
+                                    goldStatBuff.SetValue(_windowInventory.ItemsEquipment[k].Value);
+                                    goldStatBuff.Active();
                                     break;
                             }
                             break;

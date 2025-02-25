@@ -263,7 +263,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc0126b5edc46ec42adc92b62282afc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeChest: 0
   _items: []
   _uiWeakItem:
   - {fileID: 6381875423431924209, guid: 0c21f2a4f8beb4d489479f4453ba66e0, type: 3}
@@ -280,6 +279,9 @@ MonoBehaviour:
   - {fileID: 6001813192249148712, guid: 9a2db7858dc97834faeedc3d2afa86ab, type: 3}
   - {fileID: 2948993949589984043, guid: a54e9a1636c278940b343ef0cbcc7e44, type: 3}
   _uIGolds: []
+  TypeChest: 0
+  Button: {fileID: 3693270698434505462}
+  Index: 0
   Price: 50
 --- !u!222 &2231086837137426232
 CanvasRenderer:

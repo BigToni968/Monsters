@@ -23,11 +23,11 @@ namespace YG
 
         // Ваши сохранения
         public RewardData RewardData = new() { Rewards = new RewardType[7], AllRewards = 7 };
-        public List<PlayerUnit> OpenUnit = new List<PlayerUnit>();
         public List<int> ItemsEquipment = new List<int>();
+        public int OpenUnit = 1;
         public List<InventoryWeakItemType> ItemTypes = new List<InventoryWeakItemType>();
         public List<int> Chests = new List<int>();
-        public List<Items> Items = new List<Items>();
+        public List<int> Items = new List<int>();
         public float Money;
         public float Score;
         public float NeedScore;

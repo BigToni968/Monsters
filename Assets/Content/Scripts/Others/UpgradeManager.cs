@@ -21,7 +21,7 @@ namespace Assets.Content.Scripts.Others
         private void Start()
         {
             Load();
-            _windowInventory.LoadSprunki(OpenUnit, this);
+            LoadUnit();
             _playerUnits[MainUI.Instance.CurrentIdPlayer].Activate();
             Upgrade();
         }
@@ -30,30 +30,21 @@ namespace Assets.Content.Scripts.Others
         {
             if (MainUI.Instance.CurrentScore >= MainUI.Instance.NeedScore)
             {
-                for(int i = 0; i < _playerUnits.Count; i++)
+                for (int i = 0; i < _playerUnits.Count; i++)
                 {
                     _playerUnits[i].Deactivate();
                 }
-                if(MainUI.Instance.CurrentLevel == 0)
+                if (MainUI.Instance.CurrentLevel == 0)
                 {
                     MainUI.Instance.ResetLevelScore(LevelsData[1].Score);
                     _playerUnits[0].Activate();
-                    if (!_playerUnits.Contains(_playerUnits[0]))
-                    {
-                        OpenUnit.Add(_playerUnits[0]);
-                    }
                     _windowInventory.ShowSprunki(_playerUnits[0].Sprite, 0, _playerUnits, this);
                     YandexGame.savesData.CurrentIdPlayer = 0;
-                    Save();
                     return;
                 }
                 MainUI.Instance.ResetLevelScore(LevelsData[MainUI.Instance.NeedLevel].Score);
                 _playerUnits[MainUI.Instance.CurrentLevel - 1].Activate();
                 YandexGame.savesData.CurrentIdPlayer = MainUI.Instance.CurrentLevel - 1;
-                if (!_playerUnits.Contains(_playerUnits[MainUI.Instance.CurrentLevel - 1]))
-                {
-                    OpenUnit.Add(_playerUnits[MainUI.Instance.CurrentLevel - 1]);
-                }
                 SetStatPlayer(_playerUnits[MainUI.Instance.CurrentLevel - 1].Model.Health, _playerUnits[MainUI.Instance.CurrentLevel - 1].Model.Damage);
                 _windowInventory.ShowSprunki(_playerUnits[MainUI.Instance.CurrentLevel - 1].Sprite, MainUI.Instance.CurrentLevel - 1, _playerUnits, this);
                 Save();
@@ -73,9 +64,19 @@ namespace Assets.Content.Scripts.Others
                 _playerUnits[i].Deactivate();
             }
         }
+
+        private void LoadUnit()
+        {
+            YandexGame.LoadProgress();
+            if (YandexGame.savesData.OpenUnit <= 1) return;
+            for (int i = 0; i < YandexGame.savesData.OpenUnit; i++)
+            {
+                _windowInventory.ShowSprunki(_playerUnits[i].Sprite, i, _playerUnits, this);
+            }
+        }
         private void Save()
         {
-            YandexGame.savesData.OpenUnit = OpenUnit;
+            YandexGame.savesData.OpenUnit += 1;
             YandexGame.savesData.MaxHealthPlayer = UnitController.Instance.MaxHealthPlayer;
             YandexGame.savesData.CurrentHealthPlayer = UnitController.Instance.CurrentHealthPlayer;
             YandexGame.savesData.DamagePlayer = UnitController.Instance.DamagePlayer;
@@ -85,7 +86,6 @@ namespace Assets.Content.Scripts.Others
         private void Load()
         {
             YandexGame.LoadProgress();
-            OpenUnit = YandexGame.savesData.OpenUnit;
             UnitController.Instance.MaxHealthPlayer += YandexGame.savesData.MaxHealthPlayer;
             UnitController.Instance.CurrentHealthPlayer = YandexGame.savesData.CurrentHealthPlayer;
             UnitController.Instance.DamagePlayer += YandexGame.savesData.DamagePlayer;

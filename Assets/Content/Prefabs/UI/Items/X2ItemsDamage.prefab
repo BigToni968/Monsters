@@ -57,6 +57,7 @@ MonoBehaviour:
   _typeItems: 2
   Price: 300
   Value: 2
+  Index: 0
 --- !u!222 &6942708883152680468
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -149,7 +150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4493886114696726584}
   - component: {fileID: 3544177185822396065}
-  - component: {fileID: 3501810528797982460}
+  - component: {fileID: 4338713398228650774}
   m_Layer: 5
   m_Name: ImageItems
   m_TagString: Untagged
@@ -184,7 +185,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149876375829355894}
   m_CullTransparentMesh: 1
---- !u!114 &3501810528797982460
+--- !u!114 &4338713398228650774
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -206,7 +207,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 0864314d3a2884a2194666b7fd583651, type: 3}
   m_Type: 0
-  m_PreserveAspect: 1
+  m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1

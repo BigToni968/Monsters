@@ -10,5 +10,6 @@ namespace Assets.Content.Scripts.UI
         [SerializeField] private TypeItems _typeItems;
         public float Price;
         public float Value;
+        public int Index;
     }
 }

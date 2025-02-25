@@ -34,6 +34,8 @@ namespace Assets.Content.Scripts.UI
         [SerializeField] private Canvas[] _allCanvas;
 
         public int CurrentIdPlayer;
+        public float BuffExp = 1;
+        public float BuffGold = 1;
 
         [SerializeField] public static MainUI Instance { get; private set; }
 
@@ -62,11 +64,11 @@ namespace Assets.Content.Scripts.UI
                 _windowLuckySpin._timerText.text = "";
             }
         }
-        
+
         private void Start()
         {
             SetTextLevel();
-            
+            ChangeMoney(0);
             _windowLuckySpin.OnUpdate += UpdateSpin;
             _windowGift.OnUpdate += UpdateGifts;
             CheckDailyReward();
@@ -115,12 +117,11 @@ namespace Assets.Content.Scripts.UI
 
         public void AddScore(float score, float money)
         {
-            Money += money;
-            Money = Mathf.Clamp(Money, 0, float.MaxValue);
-            Score += score;
+            ChangeMoney(money);
+            Score += (score * BuffExp);
             Score = Mathf.Clamp(Score, 0, _upgradeManager.LevelsData[_upgradeManager.LevelsData.Length - 1].Score);
 
-            CurrentScore += score;
+            CurrentScore += (score * BuffExp);
             _upgradeManager.Upgrade();
             SetTextLevel();
             Save();
@@ -128,14 +129,13 @@ namespace Assets.Content.Scripts.UI
 
         public void SetTextLevel()
         {
-            float percent = CurrentScore == 0 ? 0 :((CurrentScore / NeedScore)) * 100;
+            float percent = CurrentScore == 0 ? 0 : ((CurrentScore / NeedScore)) * 100;
             _scoreText.SetText($"{new IdleCurrency(CurrentScore).ToShortString()}/{new IdleCurrency(NeedScore).ToShortString()} ({Mathf.RoundToInt(percent)}%)");
             _currentLevelText.SetText($"Уровень {CurrentLevel}");
             _futureLevelText.SetText($"Уровень {NeedLevel}");
             _scoreSlider.maxValue = NeedScore;
             _scoreSlider.minValue = 0;
             _scoreSlider.value = CurrentScore;
-            _moneyText.SetText($"{Money}");
         }
 
         public void SetAutoAttack()
@@ -208,9 +208,18 @@ namespace Assets.Content.Scripts.UI
 
         public void ChangeMoney(float money)
         {
-            Money += money;
+            if (money < 0)
+            {
+                Money += money;
+            }
+            else
+            {
+                Money += (money * BuffGold);
+            }
+
             Money = Mathf.Clamp(Money, 0, float.MaxValue);
-            _moneyText.SetText($"{Money}");
+            _moneyText.SetText($"{new IdleCurrency(Money).ToShortString()}");
+            Save();
         }
     }
 }

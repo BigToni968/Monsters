@@ -191,6 +191,7 @@ MonoBehaviour:
   _typeItems: 1
   Price: 1000
   Value: 5
+  Index: 4
 --- !u!222 &8053434074902030052
 CanvasRenderer:
   m_ObjectHideFlags: 0

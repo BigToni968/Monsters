@@ -59,14 +59,5 @@ namespace Assets.Content.Scripts.UI
             UISprunki uISprunki = Instantiate(_prefabSprunki, _contentSprunki);
             uISprunki.Init(sprite, index, playerUnits, upgradeManager);
         }
-
-        public void LoadSprunki(List<PlayerUnit> playerUnits, UpgradeManager upgradeManager)
-        {
-            for(int i = 0; i < playerUnits.Count; i++)
-            {
-                UISprunki uISprunki = Instantiate(_prefabSprunki, _contentSprunki);
-                uISprunki.Init(playerUnits[i].Sprite, i, playerUnits, upgradeManager);
-            }
-        }
     }
 }

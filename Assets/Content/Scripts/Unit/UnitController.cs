@@ -22,6 +22,7 @@ namespace Assets.Content.Scripts.Unit
         public float RotationThreshold;
         public LayerMask CollisionLayerCamera;
         public WindowInfoUnit InfoUnit;
+        public float BuffSpeed;
 
         private CinemachineFramingTransposer _cinemachineTransposer;
         private bool _isPOVMode;
@@ -117,7 +118,7 @@ namespace Assets.Content.Scripts.Unit
         private void Move()
         {
             Vector3 direction = transform.forward.normalized;
-            _unitRb.velocity = new Vector3(direction.x * MoveSpeed, _unitRb.velocity.y, direction.z * MoveSpeed);
+            _unitRb.velocity = new Vector3(direction.x * (MoveSpeed * BuffSpeed), _unitRb.velocity.y, direction.z * (MoveSpeed * BuffSpeed));
         }
 
         private void SetAnimationSpeed(float speed)

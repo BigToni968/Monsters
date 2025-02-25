@@ -57,6 +57,7 @@ MonoBehaviour:
   _typeItems: 3
   Price: 1000
   Value: 5
+  Index: 3
 --- !u!222 &8567615658805300469
 CanvasRenderer:
   m_ObjectHideFlags: 0
