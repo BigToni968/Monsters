@@ -17,6 +17,7 @@ namespace Assets.Content.Scripts.Enemy
         [SerializeField] private SkinnedMeshRenderer _skinnedMeshRenderer;
         [SerializeField] private BoxCollider _boxCollider;
         [SerializeField] private Material _highlightMaterial;
+        [SerializeField] private ParticleSystem _hitEffects;
 
         public ModelUnit Model;
         public string[] names;
@@ -118,6 +119,7 @@ namespace Assets.Content.Scripts.Enemy
 
         private void TakeHit()
         {
+            _hitEffects.Play();
             StartCoroutine(FlashRed(0.2f));
         }
 

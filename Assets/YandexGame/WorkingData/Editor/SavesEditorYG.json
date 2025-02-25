@@ -1,5 +1,5 @@
 {
-    "idSave": 53,
+    "idSave": 39,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -25,31 +25,19 @@
             0
         ]
     },
-    "ItemsEquipment": [
-        6,
-        9,
-        0
-    ],
-    "OpenUnit": 3,
-    "ItemTypes": [
-        3,
-        0,
-        1
-    ],
+    "ItemsEquipment": [],
+    "OpenUnit": 2,
+    "ItemTypes": [],
     "Chests": [],
-    "Items": [
-        0,
-        1,
-        1
-    ],
-    "Money": 4335.0,
-    "Score": 2000.0,
-    "NeedScore": 2000.0,
-    "CurrentScore": 500.0,
-    "CurrentLevel": 3,
-    "NeedLevel": 4,
-    "CurrentIdPlayer": 2,
-    "MaxHealthPlayer": 500.0,
-    "CurrentHealthPlayer": 500.0,
-    "DamagePlayer": 150.0
+    "Items": [],
+    "Money": 40.0,
+    "Score": 500.0,
+    "NeedScore": 1000.0,
+    "CurrentScore": 0.0,
+    "CurrentLevel": 2,
+    "NeedLevel": 3,
+    "CurrentIdPlayer": 1,
+    "MaxHealthPlayer": 300.0,
+    "CurrentHealthPlayer": 300.0,
+    "DamagePlayer": 100.0
 }
