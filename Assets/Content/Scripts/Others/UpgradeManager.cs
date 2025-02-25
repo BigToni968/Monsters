@@ -14,6 +14,7 @@ namespace Assets.Content.Scripts.Others
     {
         [SerializeField] private List<PlayerUnit> _playerUnits;
         [SerializeField] private WindowInventory _windowInventory;
+        [SerializeField] private ParticleSystem _effectUpgrade;
 
         public List<PlayerUnit> OpenUnit = new List<PlayerUnit>();
         public LevelData[] LevelsData;
@@ -43,6 +44,7 @@ namespace Assets.Content.Scripts.Others
                     return;
                 }
                 MainUI.Instance.ResetLevelScore(LevelsData[MainUI.Instance.NeedLevel].Score);
+                _effectUpgrade.Play();
                 _playerUnits[MainUI.Instance.CurrentLevel - 1].Activate();
                 YandexGame.savesData.CurrentIdPlayer = MainUI.Instance.CurrentLevel - 1;
                 SetStatPlayer(_playerUnits[MainUI.Instance.CurrentLevel - 1].Model.Health, _playerUnits[MainUI.Instance.CurrentLevel - 1].Model.Damage);

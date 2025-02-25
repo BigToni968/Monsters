@@ -1,0 +1,55 @@
+{
+    "idSave": 53,
+    "isFirstSession": false,
+    "language": "ru",
+    "promptDone": false,
+    "money": 1,
+    "newPlayerName": "Hello!",
+    "openLevels": [
+        false,
+        true,
+        false
+    ],
+    "RewardData": {
+        "LastTime": "24.02.2025 0:00:00",
+        "AllRewards": 7,
+        "TakeCount": 0,
+        "NotakeCount": 1,
+        "Rewards": [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    "ItemsEquipment": [
+        6,
+        9,
+        0
+    ],
+    "OpenUnit": 3,
+    "ItemTypes": [
+        3,
+        0,
+        1
+    ],
+    "Chests": [],
+    "Items": [
+        0,
+        1,
+        1
+    ],
+    "Money": 4335.0,
+    "Score": 2000.0,
+    "NeedScore": 2000.0,
+    "CurrentScore": 500.0,
+    "CurrentLevel": 3,
+    "NeedLevel": 4,
+    "CurrentIdPlayer": 2,
+    "MaxHealthPlayer": 500.0,
+    "CurrentHealthPlayer": 500.0,
+    "DamagePlayer": 150.0
+}
