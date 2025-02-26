@@ -1,4 +1,4 @@
-using Assets.Content.Scripts.Others;
+ï»¿using Assets.Content.Scripts.Others;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -32,6 +32,8 @@ namespace Assets.Content.Scripts.UI
         [SerializeField] private Transform _homePoint;
         [SerializeField] private Transform _unitController;
         [SerializeField] private Canvas[] _allCanvas;
+
+        public Slider SliderGoldBuff;
 
         public int CurrentIdPlayer;
         public float BuffExp = 1;
@@ -131,8 +133,8 @@ namespace Assets.Content.Scripts.UI
         {
             float percent = CurrentScore == 0 ? 0 : ((CurrentScore / NeedScore)) * 100;
             _scoreText.SetText($"{new IdleCurrency(CurrentScore).ToShortString()}/{new IdleCurrency(NeedScore).ToShortString()} ({Mathf.RoundToInt(percent)}%)");
-            _currentLevelText.SetText($"Óðîâåíü {CurrentLevel}");
-            _futureLevelText.SetText($"Óðîâåíü {NeedLevel}");
+            _currentLevelText.SetText($"Ð£Ñ€Ð¾Ð²ÐµÐ½ÑŒ {CurrentLevel}");
+            _futureLevelText.SetText($"Ð£Ñ€Ð¾Ð²ÐµÐ½ÑŒ {NeedLevel}");
             _scoreSlider.maxValue = NeedScore;
             _scoreSlider.minValue = 0;
             _scoreSlider.value = CurrentScore;

@@ -55,6 +55,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _typeItems: 2
+  Time: 10
   Price: 300
   Value: 2
   Index: 2
@@ -139,7 +140,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4807495115089209857}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6098102886124315634}
+        m_TargetAssemblyTypeName: Assets.Content.Scripts.UI.Items, Assembly-CSharp
+        m_MethodName: Selected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6752596013878327852
 GameObject:
   m_ObjectHideFlags: 0

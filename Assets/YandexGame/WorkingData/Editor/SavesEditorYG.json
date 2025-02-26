@@ -1,5 +1,5 @@
 {
-    "idSave": 342,
+    "idSave": 375,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -14,10 +14,10 @@
         "LastTime": "24.02.2025 0:00:00",
         "AllRewards": 7,
         "TakeCount": 0,
-        "NotakeCount": 1,
+        "NotakeCount": 2,
         "Rewards": [
             2,
-            0,
+            2,
             0,
             0,
             0,

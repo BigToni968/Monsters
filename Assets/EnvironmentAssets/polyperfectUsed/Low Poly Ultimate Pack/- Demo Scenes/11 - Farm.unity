@@ -1732,6 +1732,7 @@ MonoBehaviour:
   - {fileID: 1618958345}
   - {fileID: 391558437}
   - {fileID: 739563857}
+  SliderGoldBuff: {fileID: 566871813}
   CurrentIdPlayer: 0
   BuffExp: 1
   BuffGold: 1
@@ -4761,7 +4762,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1209772734}
   m_HandleRect: {fileID: 1209772733}
   m_Direction: 0
-  m_Value: 0.00000013268512
+  m_Value: 0
   m_Size: 0.6849315
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -27994,9 +27995,9 @@ MonoBehaviour:
   <Items>k__BackingField: []
   _contentItems: {fileID: 982539868}
   _items:
+  - {fileID: 6098102886124315634, guid: 39ff17d93355692438f549117bbacfac, type: 3}
   - {fileID: 1103019439890847874, guid: d0ec8420121630a4287bdc569040729f, type: 3}
   - {fileID: 7687078341455769273, guid: c720524c9072af4448281a7aee371772, type: 3}
-  - {fileID: 6098102886124315634, guid: 39ff17d93355692438f549117bbacfac, type: 3}
   - {fileID: 5913953310432758683, guid: 32e1575b6b4889b40ba8e244a2627169, type: 3}
   - {fileID: 5568990593066257334, guid: 5550d3d58281bfd44aafd1e50a13c9a2, type: 3}
   - {fileID: 6444068662927388261, guid: c9ad9938acb8f4449b521e44c88622be, type: 3}
@@ -43449,7 +43450,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1018729277}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.58558553
+  m_Size: 0.5855856
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -45442,7 +45443,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1128387523}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 739563861}
+        m_TargetAssemblyTypeName: Assets.Content.Scripts.UI.WindowItem, Assembly-CSharp
+        m_MethodName: Use
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1128387523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74025,7 +74038,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 472838891}
   m_HandleRect: {fileID: 472838890}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
