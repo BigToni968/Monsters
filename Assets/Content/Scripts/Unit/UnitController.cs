@@ -1,6 +1,7 @@
 ﻿using Assets.Content.Scripts.UI;
 using Cinemachine;
 using UnityEngine;
+using YG;
 
 namespace Assets.Content.Scripts.Unit
 {
@@ -23,6 +24,7 @@ namespace Assets.Content.Scripts.Unit
         public LayerMask CollisionLayerCamera;
         public WindowInfoUnit InfoUnit;
         public float BuffSpeed;
+        public bool IsTakeDamage;
 
         private CinemachineFramingTransposer _cinemachineTransposer;
         private bool _isPOVMode;
@@ -37,9 +39,27 @@ namespace Assets.Content.Scripts.Unit
                 return;
             }
 
-            Instance = this;
+            Instance = this;           
+            
+            var randomInt = Random.Range(1, 10000);
+            
+            if (YandexGame.playerName == "unauthorized" || YandexGame.playerName == "")
+            {
+                if (YandexGame.EnvironmentData.language == "ru")
+                {
+                    YandexGame.playerName = "Игрок" + randomInt;
+                }
+                else if (YandexGame.EnvironmentData.language == "en")
+                {
+                    YandexGame.playerName = "Player" + randomInt;
+                }
+                else if (YandexGame.EnvironmentData.language == "tr")
+                {
+                    YandexGame.playerName = "Oyuncu" + randomInt;
+                }
+            }
 
-            InfoUnit.SetName(name);
+            InfoUnit.SetName(YandexGame.playerName);
             _cinemachineTransposer = _virtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
         }
 

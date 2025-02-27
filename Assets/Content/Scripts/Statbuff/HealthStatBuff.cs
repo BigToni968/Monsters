@@ -1,4 +1,5 @@
-﻿using Assets.Content.Scripts.Unit;
+﻿using Assets.Content.Scripts.UI;
+using Assets.Content.Scripts.Unit;
 
 namespace Assets.Content.Scripts.Statbuff
 {
@@ -9,6 +10,7 @@ namespace Assets.Content.Scripts.Statbuff
             base.Active();
             UnitController.Instance.MaxHealthPlayer += value;
             UnitController.Instance.CurrentHealthPlayer += value;
+            MainUI.Instance.SetStat();
         }
 
         public override void Deactivate()
@@ -16,6 +18,7 @@ namespace Assets.Content.Scripts.Statbuff
             base.Deactivate();
             UnitController.Instance.MaxHealthPlayer -= value;
             UnitController.Instance.CurrentHealthPlayer -= value;
+            MainUI.Instance.SetStat();
         }
     }
 }

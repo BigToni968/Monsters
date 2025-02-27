@@ -36,9 +36,9 @@ namespace YG
         public int NeedLevel = 1;
         public int CurrentIdPlayer;
 
-        public float MaxHealthPlayer = 100;
-        public float CurrentHealthPlayer = 100;
-        public float DamagePlayer = 50;
+        public float MaxHealthPlayer = 10;
+        public float CurrentHealthPlayer = 10;
+        public float DamagePlayer = 3;
         // ...
 
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны

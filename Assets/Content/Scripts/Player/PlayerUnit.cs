@@ -6,6 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Assets.Content.Scripts.Player
 {
@@ -55,13 +56,13 @@ namespace Assets.Content.Scripts.Player
 
         public void TakeDamage(float damage, Transform transform = null)
         {
+            AudioManager.Instance.Sound.PlayOneShot(AudioManager.Instance.KickClips[Random.Range(0, AudioManager.Instance.KickClips.Length)]);
             if (_coroutineRelax != null)
             {
                 StopCoroutine(_coroutineRelax);
                 _coroutineRelax = null;
             }
-
-            _takeDamage = true;
+            UnitController.Instance.IsTakeDamage = true;
             UnitController.Instance.CurrentHealthPlayer -= damage;
             UnitController.Instance.CurrentHealthPlayer = Mathf.Clamp(UnitController.Instance.CurrentHealthPlayer, 0, UnitController.Instance.MaxHealthPlayer);
             UnitController.Instance.InfoUnit.ShowHealth();
@@ -80,7 +81,7 @@ namespace Assets.Content.Scripts.Player
         private IEnumerator TimerRelax()
         {
             yield return new WaitForSeconds(_delayRelax);
-            _takeDamage = false;
+            UnitController.Instance.IsTakeDamage = false;
             _coroutineRelax = null;
         }
 
@@ -88,11 +89,14 @@ namespace Assets.Content.Scripts.Player
         {
             while (true)
             {
-                if (!_takeDamage)
+                if (!UnitController.Instance.IsTakeDamage)
                 {
                     yield return new WaitForSeconds(1);
-                    UnitController.Instance.CurrentHealthPlayer += Model.Regeneration;
-                    UnitController.Instance.CurrentHealthPlayer = Mathf.Clamp(UnitController.Instance.CurrentHealthPlayer, 0, UnitController.Instance.MaxHealthPlayer);
+                    if (!UnitController.Instance.IsTakeDamage)
+                    {
+                        UnitController.Instance.CurrentHealthPlayer += Model.Regeneration;
+                        UnitController.Instance.CurrentHealthPlayer = Mathf.Clamp(UnitController.Instance.CurrentHealthPlayer, 0, UnitController.Instance.MaxHealthPlayer);
+                    }
                 }
                 if (UnitController.Instance.CurrentHealthPlayer >= UnitController.Instance.MaxHealthPlayer)
                 {

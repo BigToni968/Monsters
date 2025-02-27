@@ -365,7 +365,7 @@ MonoBehaviour:
   Type: 1
   IsBusy: 0
   Value: 50
-  Price: 50
+  Price: 3000
   Image: {fileID: 9122997398081720843}
   IndexForSpawn: 10
 --- !u!222 &7578638937638172487

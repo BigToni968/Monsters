@@ -88,7 +88,7 @@ namespace Assets.Content.Scripts.Others
             {
                 return _commonItems[Random.Range(0, _commonItems.Length)];
             }
-            else if (roll < 0.93f)
+            else if (roll < 0.9f)
             {
                 return _rareItems[Random.Range(0, _rareItems.Length)];
             }

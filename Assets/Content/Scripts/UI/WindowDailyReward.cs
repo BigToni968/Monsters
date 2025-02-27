@@ -1,10 +1,12 @@
 using Assets.Content.Scripts.Player;
+using Assets.Content.Scripts.UI.Weak;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using YG;
+using static UnityEditor.Progress;
 
 namespace Assets.Content.Scripts.UI
 {
@@ -38,6 +40,10 @@ namespace Assets.Content.Scripts.UI
     public class WindowDailyReward : MonoBehaviour
     {
         [SerializeField] private List<Button> _buttonDailyRewards;
+        [SerializeField] private WindowInventory _windowInventory;
+        [SerializeField] private WindowItem _windowItem;
+        [SerializeField] private UiWeakItem[] _weakItems;
+        [SerializeField] private Items[] _items;
 
         public delegate void RewardDelegate();
         public event RewardDelegate OnUpdateReward;
@@ -72,25 +78,35 @@ namespace Assets.Content.Scripts.UI
             switch (index)
             {
                 case 0:
-                    Debug.Log("1 день");
+                    _windowInventory.AddItemEquipment(_weakItems[0]);
                     break;
                 case 1:
-                    Debug.Log("2 день");
+                    MainUI.Instance.AddMoney(5000);
                     break;
                 case 2:
-                    Debug.Log("3 день");
+                    _windowItem.AddItem(_items[0]);
+                    _windowItem.AddItem(_items[1]);
+                    _windowItem.AddItem(_items[2]);
                     break;
                 case 3:
-                    Debug.Log("4 день");
+                    for (int i = 0; i < 2; i++)
+                    {
+                        _windowInventory.AddItemEquipment(_weakItems[1]);
+                    }
                     break;
                 case 4:
-                    Debug.Log("5 день");
+                    MainUI.Instance.AddMoney(25000);
                     break;
                 case 5:
-                    Debug.Log("6 день");
+                    for (int i = 0; i < 5; i++)
+                    {
+                        _windowItem.AddItem(_items[0]);
+                        _windowItem.AddItem(_items[1]);
+                        _windowItem.AddItem(_items[2]);
+                    }
                     break;
                 case 6:
-                    Debug.Log("7 день");
+                    MainUI.Instance.AddMoney(50000);
                     break;
             }
 

@@ -13,7 +13,7 @@ namespace Assets.Content.Scripts.UI
     public class WindowInventory : MonoBehaviour
     {
         [field: SerializeField] public List<UiWeakItem> ItemsEquipment { get; private set; } = new List<UiWeakItem>();
-        
+
         [SerializeField] private Transform _contentEquipment;
         [SerializeField] private Transform _contentSprunki;
         [SerializeField] private UISprunki _prefabSprunki;
@@ -54,10 +54,10 @@ namespace Assets.Content.Scripts.UI
             ItemsEquipment.Add(_item);
         }
 
-        public void ShowSprunki(Sprite sprite, int index, List<PlayerUnit> playerUnits, UpgradeManager upgradeManager)
+        public void ShowSprunki(Sprite sprite, int index, List<PlayerUnit> playerUnits, UpgradeManager upgradeManager, Animator animator, ParticleSystem particle)
         {
             UISprunki uISprunki = Instantiate(_prefabSprunki, _contentSprunki);
-            uISprunki.Init(sprite, index, playerUnits, upgradeManager);
+            uISprunki.Init(sprite, index, playerUnits, upgradeManager, animator, particle);
         }
     }
 }

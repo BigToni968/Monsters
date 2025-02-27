@@ -1,4 +1,5 @@
 ﻿using Assets.Content.Scripts.Others;
+using Assets.Content.Scripts.Unit;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,6 +22,8 @@ namespace Assets.Content.Scripts.UI
         [SerializeField] private TextMeshProUGUI _currentLevelText;
         [SerializeField] private TextMeshProUGUI _futureLevelText;
         [SerializeField] private TextMeshProUGUI _moneyText;
+        [SerializeField] private TextMeshProUGUI _healthMaxStat;
+        [SerializeField] private TextMeshProUGUI _damageMaxStat;
         [SerializeField] private Slider _scoreSlider;
         [SerializeField] private Button _autoAttackButton;
         [SerializeField] private Sprite[] autoAttackSprites;
@@ -34,6 +37,11 @@ namespace Assets.Content.Scripts.UI
         [SerializeField] private Canvas[] _allCanvas;
 
         public Slider SliderGoldBuff;
+        public Slider SliderExpBuff;
+        public Slider SliderDamageBuff;
+        public Image GoldBuffImage;
+        public Image ExpBuffImage;
+        public Image DamageBuffImage;
 
         public int CurrentIdPlayer;
         public float BuffExp = 1;
@@ -157,7 +165,7 @@ namespace Assets.Content.Scripts.UI
             {
                 _uiNotifications[0].Set(_windowLuckySpin.TotalSpin.ToString());
                 _uiNotifications[0].Show();
-                //AudioManager.Instance.Sound.PlayOneShot(AudioManager.Instance.NotificationActivated);
+                AudioManager.Instance.Sound.PlayOneShot(AudioManager.Instance.NotificationClip);
                 return;
             }
 
@@ -182,7 +190,7 @@ namespace Assets.Content.Scripts.UI
             {
                 _uiNotifications[2].Set(_windowGift.NoTake.ToString());
                 _uiNotifications[2].Show();
-                //AudioManager.Instance.Sound.PlayOneShot(AudioManager.Instance.NotificationActivated);
+                AudioManager.Instance.Sound.PlayOneShot(AudioManager.Instance.NotificationClip);
                 return;
             }
 
@@ -222,6 +230,18 @@ namespace Assets.Content.Scripts.UI
             Money = Mathf.Clamp(Money, 0, float.MaxValue);
             _moneyText.SetText($"{new IdleCurrency(Money).ToShortString()}");
             Save();
+        }
+        public void AddMoney(float money)
+        {
+            Money += money;
+            Money = Mathf.Clamp(Money, 0, float.MaxValue);
+            _moneyText.SetText($"{new IdleCurrency(Money).ToShortString()}");
+            Save();
+        }
+        public void SetStat()
+        {
+            _healthMaxStat.SetText($"{new IdleCurrency(UnitController.Instance.MaxHealthPlayer).ToShortString()}");
+            _damageMaxStat.SetText($"{new IdleCurrency(UnitController.Instance.DamagePlayer).ToShortString()}");
         }
     }
 }

@@ -706,16 +706,16 @@ MonoBehaviour:
   _hitEffects: {fileID: 2891072218798067767}
   Model:
     Health: 200
-    Damage: 20
-    Regeneration: 10
+    Damage: 35
+    Regeneration: 15
     DelayRegeneration: 1
-    RadiusFindPlayer: 5
-    DelayAttack: 1
+    RadiusFindPlayer: 6
+    DelayAttack: 1.1
     SpeedRotation: 7
-    TimeForAttack: 10
+    TimeForAttack: 25
     DelayDeath: 5
-    Score: 250
-    Money: 20
+    Score: 70
+    Money: 40
   names:
   - "\u041A\u0440\u044B\u0441\u0430"
   Animator: {fileID: 3959008521547160349}
@@ -2584,7 +2584,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8417181714678604278, guid: c58b2cc3ef9382a48853214df3ad6a00, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.2
+      value: 1.3421609
       objectReference: {fileID: 0}
     - target: {fileID: 8417181714678604278, guid: c58b2cc3ef9382a48853214df3ad6a00, type: 3}
       propertyPath: m_LocalScale.y
@@ -2592,7 +2592,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8417181714678604278, guid: c58b2cc3ef9382a48853214df3ad6a00, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 2.2248
       objectReference: {fileID: 0}
     - target: {fileID: 8417181714678604278, guid: c58b2cc3ef9382a48853214df3ad6a00, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2604,7 +2604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8417181714678604278, guid: c58b2cc3ef9382a48853214df3ad6a00, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.693
+      value: 0.496
       objectReference: {fileID: 0}
     - target: {fileID: 8417181714678604278, guid: c58b2cc3ef9382a48853214df3ad6a00, type: 3}
       propertyPath: m_LocalRotation.w

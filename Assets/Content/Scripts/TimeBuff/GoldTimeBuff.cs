@@ -7,13 +7,13 @@ namespace Assets.Content.Scripts.TimeBuff
         public override void Active()
         {
             base.Active();
-            MainUI.Instance.BuffGold = value;            
+            MainUI.Instance.BuffGold += value;            
         }
 
         public override void Deactivate()
         {
             base.Deactivate();
-            MainUI.Instance.BuffGold = 1f;
+            MainUI.Instance.BuffGold -= value;
         }
     }
 }

@@ -6,6 +6,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Assets.Content.Scripts.Enemy
 {
@@ -57,6 +58,7 @@ namespace Assets.Content.Scripts.Enemy
 
         public void TakeDamage(float damage, Transform transform = null)
         {
+            AudioManager.Instance.Sound.PlayOneShot(AudioManager.Instance.KickClips[Random.Range(0, AudioManager.Instance.KickClips.Length)]);
             TakeHit();
             IsActive = true;
             Target = transform;

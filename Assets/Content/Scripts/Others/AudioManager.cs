@@ -11,6 +11,13 @@ namespace Assets.Content.Scripts.Others
         public AudioSource Music;
         public AudioSource Sound;
 
+        public AudioClip[] MusicClips;
+        public AudioClip[] KickClips;
+        public AudioClip NotificationClip;
+        public AudioClip Spinner;
+        public AudioClip ClipButton;
+        public AudioClip ClipOpenUnit;
+
         private List<AudioClip> availableTracks;
 
         private void Awake()
@@ -44,23 +51,20 @@ namespace Assets.Content.Scripts.Others
             PlayerPrefs.SetFloat("Volume", soundValue);
             Sound.volume = soundValue;
 
-            //StartPlaying();
+            StartPlaying();
         }
 
         public void ButtonSound()
         {
-            //Sound.PlayOneShot(ClickButton);
+            Sound.PlayOneShot(ClipButton);
         }
-
-        public void SoundSpinner()
+        public void SoundChest()
         {
-            //Sound.PlayOneShot(Spinner);
+            Sound.PlayOneShot(Spinner);
         }
-
-
         void StartPlaying()
         {
-            //availableTracks = new List<AudioClip>(MusicClips);
+            availableTracks = new List<AudioClip>(MusicClips);
             PlayNextTrack();
         }
 
@@ -68,7 +72,7 @@ namespace Assets.Content.Scripts.Others
         {
             if (availableTracks.Count == 0)
             {
-                //availableTracks = new List<AudioClip>(MusicClips);
+                availableTracks = new List<AudioClip>(MusicClips);
                 ShuffleTracks(availableTracks);
             }
 

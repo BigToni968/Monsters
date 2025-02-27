@@ -189,10 +189,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _typeItems: 0
-  Time: 10
+  Time: 300
   Price: 1000
-  Value: 5
+  Value: 4
   Index: 4
+  Image: {fileID: 4280485793544168953}
+  ImageBuckGround: {fileID: 5488674288293595458}
+  ColorGreen: {r: 0, g: 1, b: 0.003921569, a: 1}
+  ColorWhite: {r: 1, g: 1, b: 1, a: 1}
 --- !u!222 &8053434074902030052
 CanvasRenderer:
   m_ObjectHideFlags: 0

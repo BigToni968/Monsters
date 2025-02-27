@@ -74,6 +74,21 @@ namespace Assets.Content.Scripts.UI
             }
         }
 
+        public void BuyChestAds(int index)
+        {
+            _windowChest.AddChest(_chests[index]);
+        }
+
+        public void BuyItemAds(int index)
+        {
+            _windowItem.AddItem(_items[index]);
+        }
+
+        public void BuyEquipAds(int index)
+        {
+            _windowInventory.AddItemEquipment(_uiWeakItems[index]);
+        }
+
         private IEnumerator ScaleAndDeactivate()
         {
             _textNoMoney.gameObject.SetActive(true);
@@ -99,7 +114,7 @@ namespace Assets.Content.Scripts.UI
                 yield return null;
             }
 
-            _textNoMoney.transform.localScale = target; 
+            _textNoMoney.transform.localScale = target;
         }
     }
 }

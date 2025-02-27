@@ -282,7 +282,7 @@ MonoBehaviour:
   TypeChest: 0
   Button: {fileID: 3693270698434505462}
   Index: 0
-  Price: 50
+  Price: 2500
 --- !u!222 &2231086837137426232
 CanvasRenderer:
   m_ObjectHideFlags: 0

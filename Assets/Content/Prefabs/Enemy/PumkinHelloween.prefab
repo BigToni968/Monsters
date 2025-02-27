@@ -136,8 +136,8 @@ MonoBehaviour:
     SpeedRotation: 0
     TimeForAttack: 15
     DelayDeath: 5
-    Score: 250
-    Money: 20
+    Score: 55
+    Money: 35
   names:
   - "\u0417\u043B\u0430\u044F \u0442\u044B\u043A\u0432\u0430"
   Animator: {fileID: 0}

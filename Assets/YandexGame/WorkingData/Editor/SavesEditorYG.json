@@ -1,5 +1,5 @@
 {
-    "idSave": 375,
+    "idSave": 220,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -11,13 +11,13 @@
         false
     ],
     "RewardData": {
-        "LastTime": "24.02.2025 0:00:00",
+        "LastTime": "26.02.2025 0:00:00",
         "AllRewards": 7,
         "TakeCount": 0,
-        "NotakeCount": 2,
+        "NotakeCount": 1,
         "Rewards": [
             2,
-            2,
+            0,
             0,
             0,
             0,
@@ -26,30 +26,23 @@
         ]
     },
     "ItemsEquipment": [
-        6,
-        9,
-        7,
-        6
+        5,
+        8
     ],
-    "OpenUnit": 7,
-    "ItemTypes": [
-        0,
-        0
-    ],
+    "OpenUnit": 3,
+    "ItemTypes": [],
     "Chests": [],
     "Items": [
-        1,
-        0,
         0
     ],
-    "Money": 6590.0,
-    "Score": 30500.0,
-    "NeedScore": 30000.0,
-    "CurrentScore": 0.0,
-    "CurrentLevel": 7,
-    "NeedLevel": 8,
-    "CurrentIdPlayer": 6,
-    "MaxHealthPlayer": 1360.0,
-    "CurrentHealthPlayer": 1360.0,
-    "DamagePlayer": 350.0
+    "Money": 1430.0,
+    "Score": 695.0,
+    "NeedScore": 610.0,
+    "CurrentScore": 220.0,
+    "CurrentLevel": 3,
+    "NeedLevel": 4,
+    "CurrentIdPlayer": 2,
+    "MaxHealthPlayer": 75.0,
+    "CurrentHealthPlayer": 75.0,
+    "DamagePlayer": 35.0
 }

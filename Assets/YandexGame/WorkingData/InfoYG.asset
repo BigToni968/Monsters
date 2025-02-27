@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efa747916aa66674d96ea40ca8a480b2, type: 3}
   m_Name: InfoYG
   m_EditorClassIdentifier: 
+  flags:
+  - name: InterCD
+    value: 60
   scopes: 1
   playerPhotoSize: 0
   autoGameReadyAPI: 1

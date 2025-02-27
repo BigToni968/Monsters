@@ -45,5 +45,9 @@ namespace Assets.Content.Scripts.TimeBuff
             if (_time <= 0f)
                 Destroy(this);
         }
+        private void OnDestroy()
+        {
+            Removed = null;
+        }
     }
 }

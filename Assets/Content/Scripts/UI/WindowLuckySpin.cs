@@ -1,4 +1,6 @@
+using Assets.Content.Scripts.Others;
 using Assets.Content.Scripts.Player;
+using Assets.Content.Scripts.UI.Weak;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -15,6 +17,10 @@ namespace Assets.Content.Scripts.UI
         [SerializeField] private Button _buttonExit;
         [SerializeField] private Button _buttonSpin;
         [SerializeField] public TextMeshProUGUI _timerText;
+        [SerializeField] private WindowItem _windowItem;
+        [SerializeField] private WindowInventory _windowInventory;
+        [SerializeField] private Items _item;
+        [SerializeField] private UiWeakItem _weakItem;
 
         public bool IsTurn = false;
         public bool IsSpin = false;
@@ -55,7 +61,7 @@ namespace Assets.Content.Scripts.UI
         {
             if (IsTurn && !IsSpin)
             {
-               // _AudioManager.SoundSpinner();
+                AudioManager.Instance.Sound.PlayOneShot(AudioManager.Instance.Spinner);
                 IsSpin = true;
                 StartCoroutine(TurnTheWheel());
                 TotalSpin--;
@@ -98,24 +104,22 @@ namespace Assets.Content.Scripts.UI
             switch (_whatWin)
             {
                 case 0:
-                    
-                    Debug.Log("1 приз");
+                    UpdateSpin(2);
                     break;
                 case 60:
-                    
-                    Debug.Log("2 приз");
+                    MainUI.Instance.AddMoney(250);
                     break;
                 case 120:
-                    Debug.Log("3 приз");
+                    _windowItem.AddItem(_item);
                     break;
                 case 180:
-                    Debug.Log("4 приз");
+                    MainUI.Instance.AddMoney(500);
                     break;
                 case 240:
-                    Debug.Log("5 приз");
+                    _windowInventory.AddItemEquipment(_weakItem);
                     break;
                 case 300:
-                    Debug.Log("6 приз");
+                    MainUI.Instance.AddMoney(750);
                     break;
             }
             _buttonExit.gameObject.SetActive(true);

@@ -1,3 +1,4 @@
+using Assets.Content.Scripts.UI.Weak;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -22,6 +23,11 @@ namespace Assets.Content.Scripts.UI
         [SerializeField] private UIGift _uiGiftsPrefab;
         [SerializeField] private GiftData[] Gifts;
         [SerializeField] private Animator _animator;
+        [SerializeField] private WindowLuckySpin _windowLuckySpin;
+        [SerializeField] private WindowItem _windowItem;
+        [SerializeField] private Items[] _items;
+        [SerializeField] private WindowInventory _windowInventory;
+        [SerializeField] private UiWeakItem[] _weakItems;
 
         public int NoTake = 0;
 
@@ -76,40 +82,58 @@ namespace Assets.Content.Scripts.UI
             switch (index)
             {
                 case 0:
-                    Debug.Log("Подарок 1");
+                    _windowLuckySpin.UpdateSpin(1);
                     break;
                 case 1:
-                    Debug.Log("Подарок 2");
+                    MainUI.Instance.AddMoney(500);
                     break;
                 case 2:
-                    Debug.Log("Подарок 3");
+                    _windowItem.AddItem(_items[0]);
                     break;
                 case 3:
-                    Debug.Log("Подарок 4");
+                    MainUI.Instance.AddMoney(2500);
                     break;
                 case 4:
-                    Debug.Log("Подарок 5");
+                    for (int i = 0; i < 2; i++)
+                    {
+                        _windowInventory.AddItemEquipment(_weakItems[0]);
+                    }
                     break;
                 case 5:
-                    Debug.Log("Подарок 6");
+                    for (int i = 0; i < 2; i++)
+                    {
+                        _windowInventory.AddItemEquipment(_weakItems[1]);
+                    }
                     break;
                 case 6:
-                    Debug.Log("Подарок 7");
+                    MainUI.Instance.AddMoney(10000);
                     break;
                 case 7:
-                    Debug.Log("Подарок 8");
+                    for (int i = 0; i < 2; i++)
+                    {
+                        _windowItem.AddItem(_items[1]);
+                    }
                     break;
                 case 8:
-                    Debug.Log("Подарок 9");
+                    for (int i = 0; i < 2; i++)
+                    {
+                        _windowItem.AddItem(_items[2]);
+                    }
                     break;
                 case 9:
-                    Debug.Log("Подарок 10");
+                    for (int i = 0; i < 2; i++)
+                    {
+                        _windowInventory.AddItemEquipment(_weakItems[2]);
+                    }
                     break;
                 case 10:
-                    Debug.Log("Подарок 11");
+                    for (int i = 0; i < 2; i++)
+                    {
+                        _windowInventory.AddItemEquipment(_weakItems[3]);
+                    }
                     break;
                 case 11:
-                    Debug.Log("Подарок 12");
+                    MainUI.Instance.AddMoney(30000);
                     break;
             }
 

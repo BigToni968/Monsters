@@ -227,17 +227,17 @@ MonoBehaviour:
   _highlightMaterial: {fileID: 2100000, guid: 366774be727a5f845b1f353b74b4e5e1, type: 2}
   _hitEffects: {fileID: 2288716786680030301}
   Model:
-    Health: 200
-    Damage: 20
+    Health: 1200
+    Damage: 80
     Regeneration: 10
     DelayRegeneration: 1
-    RadiusFindPlayer: 5
+    RadiusFindPlayer: 6
     DelayAttack: 1
     SpeedRotation: 7
-    TimeForAttack: 10
+    TimeForAttack: 25
     DelayDeath: 5
-    Score: 250
-    Money: 20
+    Score: 200
+    Money: 75
   names:
   - "\u0417\u0443\u0431\u0430\u0441\u0442\u044B\u0439 \u0432\u043E\u043B\u043A"
   Animator: {fileID: 3910649537280951695}
@@ -2806,27 +2806,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8417181714678604278, guid: c58b2cc3ef9382a48853214df3ad6a00, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 2.1051567
       objectReference: {fileID: 0}
     - target: {fileID: 8417181714678604278, guid: c58b2cc3ef9382a48853214df3ad6a00, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.2116
       objectReference: {fileID: 0}
     - target: {fileID: 8417181714678604278, guid: c58b2cc3ef9382a48853214df3ad6a00, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.5
+      value: 3.5026264
       objectReference: {fileID: 0}
     - target: {fileID: 8417181714678604278, guid: c58b2cc3ef9382a48853214df3ad6a00, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0.054
       objectReference: {fileID: 0}
     - target: {fileID: 8417181714678604278, guid: c58b2cc3ef9382a48853214df3ad6a00, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.334
+      value: 0.574
       objectReference: {fileID: 0}
     - target: {fileID: 8417181714678604278, guid: c58b2cc3ef9382a48853214df3ad6a00, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.095
+      value: 1.047
       objectReference: {fileID: 0}
     - target: {fileID: 8417181714678604278, guid: c58b2cc3ef9382a48853214df3ad6a00, type: 3}
       propertyPath: m_LocalRotation.w

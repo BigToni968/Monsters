@@ -226,6 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _image: {fileID: 3072863487327665143}
+  _backGround: {fileID: 5789590495970965511}
   _button: {fileID: 7986450283020586997}
 --- !u!222 &5034416820957363862
 CanvasRenderer:
