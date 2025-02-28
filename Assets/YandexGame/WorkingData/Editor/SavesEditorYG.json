@@ -1,5 +1,5 @@
 {
-    "idSave": 73,
+    "idSave": 83,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -28,7 +28,9 @@
     "ItemsEquipment": [],
     "OpenUnit": 1,
     "ItemTypes": [],
-    "Chests": [],
+    "Chests": [
+        0
+    ],
     "Items": [],
     "Money": 0.0,
     "Score": 0.0,
