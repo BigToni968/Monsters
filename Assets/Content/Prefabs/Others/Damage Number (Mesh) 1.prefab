@@ -57,7 +57,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b08f26fb5cb4a474a9b69de61c8cb6db, type: 2}
+  - {fileID: -8326535966584245280, guid: 5a2c419de39135a408c3e08c22c553d8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -101,8 +101,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4777c0d4c89c2ef418f663d14f78a942, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: b08f26fb5cb4a474a9b69de61c8cb6db, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5a2c419de39135a408c3e08c22c553d8, type: 2}
+  m_sharedMaterial: {fileID: -8326535966584245280, guid: 5a2c419de39135a408c3e08c22c553d8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -642,7 +642,7 @@ MonoBehaviour:
   enablePooling: 0
   poolSize: 50
   disableOnSceneLoad: 1
-  editorLastFont: a_ConceptoTitulNrFy SDF3D
+  editorLastFont: a_AlternaSw SDF3D
   position: {x: 0, y: 0, z: 0}
 --- !u!210 &3681709240402731141
 SortingGroup:
