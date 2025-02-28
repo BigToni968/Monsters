@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33913057181661068}
   - component: {fileID: 23089535054679896}
   - component: {fileID: 65958742403826660}
-  - component: {fileID: 8701878930339822727}
   m_Layer: 0
   m_Name: fence-shrub
   m_TagString: Untagged
@@ -106,22 +105,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.093186, y: 1.0525837, z: 0.8612708}
   m_Center: {x: -0.012992859, y: 0.5262917, z: -0.0052683502}
---- !u!205 &8701878930339822727
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1694978722104928}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: -0.012992859, y: 0.47629166, z: -0.0052683353}
-  m_Size: 1
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.04491837
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 23089535054679896}
-  m_Enabled: 1

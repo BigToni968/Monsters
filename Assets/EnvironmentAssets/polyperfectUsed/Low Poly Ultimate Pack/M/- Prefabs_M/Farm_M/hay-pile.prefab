@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4834514381054620}
   - component: {fileID: 33152188834208102}
   - component: {fileID: 23552072646088638}
-  - component: {fileID: 756953781325619023}
   - component: {fileID: 65146760834332692}
   m_Layer: 0
   m_Name: hay-pile
@@ -85,26 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!205 &756953781325619023
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1536129071639756}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 0.01665759, y: 0, z: -0.07337582}
-  m_Size: 1
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.07894082
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 23552072646088638}
-    - renderer: {fileID: 0}
-  m_Enabled: 1
 --- !u!65 &65146760834332692
 BoxCollider:
   m_ObjectHideFlags: 0

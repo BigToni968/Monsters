@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4000011596552724}
   - component: {fileID: 33000013747418464}
   - component: {fileID: 23000010188000720}
-  - component: {fileID: 230879557024952438}
   - component: {fileID: 64779049253645274}
   m_Layer: 0
   m_Name: tree-oak
@@ -86,25 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!205 &230879557024952438
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000011714656038}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: -0.24998164, y: 4.8422008, z: -0.07283497}
-  m_Size: 9.6844015
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.22293177
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 23000010188000720}
-  m_Enabled: 1
 --- !u!64 &64779049253645274
 MeshCollider:
   m_ObjectHideFlags: 0

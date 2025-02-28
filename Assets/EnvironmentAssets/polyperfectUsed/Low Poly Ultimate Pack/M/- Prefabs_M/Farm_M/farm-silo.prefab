@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33054408094106150}
   - component: {fileID: 23106525679360460}
   - component: {fileID: 64410808852225328}
-  - component: {fileID: 5118630660748048018}
   m_Layer: 0
   m_Name: farm-silo
   m_TagString: Untagged
@@ -108,22 +107,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 9fe2dd1ad78834eff8b7314b7268a1ff, type: 3}
---- !u!205 &5118630660748048018
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1586341209567514}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 0, y: 5.972105, z: 0}
-  m_Size: 11.94421
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.19301926
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 23106525679360460}
-  m_Enabled: 1

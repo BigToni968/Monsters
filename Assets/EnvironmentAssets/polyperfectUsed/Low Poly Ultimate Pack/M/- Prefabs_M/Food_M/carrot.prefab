@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4046469110218682}
   - component: {fileID: 33797280279361966}
   - component: {fileID: 23808879136475862}
-  - component: {fileID: 816063582499121426}
   - component: {fileID: 64744010051850176}
   m_Layer: 0
   m_Name: carrot
@@ -86,25 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!205 &816063582499121426
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1694223022736750}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 0, y: 0.021447778, z: 0.000000007450581}
-  m_Size: 0.44969952
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.03876226
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 23808879136475862}
-  m_Enabled: 1
 --- !u!64 &64744010051850176
 MeshCollider:
   m_ObjectHideFlags: 0

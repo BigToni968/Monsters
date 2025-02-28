@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3360956}
   - component: {fileID: 2367348}
   - component: {fileID: 64574709078331316}
-  - component: {fileID: 3744863764078814923}
   m_Layer: 0
   m_Name: stone-round
   m_TagString: Untagged
@@ -107,22 +106,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: c99be45492b44a9459edac984836ec21, type: 3}
---- !u!205 &3744863764078814923
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 161188}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: -0.25451875, y: 0.4867401, z: 0.16484833}
-  m_Size: 1
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.060020763
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 2367348}
-  m_Enabled: 1

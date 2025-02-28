@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33966930923619038}
   - component: {fileID: 23375245593638378}
   - component: {fileID: 65483658346360040}
-  - component: {fileID: 2879428904586297737}
   m_Layer: 0
   m_Name: shed-dog
   m_TagString: Untagged
@@ -108,22 +107,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.8114389, y: 0.913571, z: 0.7913301}
   m_Center: {x: -0.0008753985, y: 0.45678544, z: 0.01935333}
---- !u!205 &2879428904586297737
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1344846166253680}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: -0.0011380315, y: 0.5938209, z: 0.025159359}
-  m_Size: 1.1876421
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.066044
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 23375245593638378}
-  m_Enabled: 1

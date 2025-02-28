@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6353433436386146436}
   - component: {fileID: 6353433436385376420}
   - component: {fileID: 6353433436384377444}
-  - component: {fileID: 3911318665839387927}
   - component: {fileID: 8199929542282952125}
   m_Layer: 0
   m_Name: tree-round-apple
@@ -87,25 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!205 &3911318665839387927
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6353433436386305188}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 0.0073633194, y: 2.5279095, z: 0.04996431}
-  m_Size: 5.055819
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.26644456
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 6353433436384377444}
-  m_Enabled: 1
 --- !u!64 &8199929542282952125
 MeshCollider:
   m_ObjectHideFlags: 0

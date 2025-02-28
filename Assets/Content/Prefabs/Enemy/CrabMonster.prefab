@@ -1100,7 +1100,6 @@ GameObject:
   - component: {fileID: 7423102397576765544}
   - component: {fileID: 2249182425832477032}
   - component: {fileID: 2327177642086532477}
-  - component: {fileID: 2013384701674974305}
   m_Layer: 0
   m_Name: CrabMonster
   m_TagString: Untagged
@@ -1213,28 +1212,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0.5, z: 0}
---- !u!205 &2013384701674974305
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5800951547240723513}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 0.4397397, y: 0.7737832, z: 0.047733545}
-  m_Size: 1
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.047504816
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 3800010416810510851}
-    - renderer: {fileID: 6226527958224285049}
-    - renderer: {fileID: 8619125319637880390}
-    - renderer: {fileID: 159700616689486923}
-  m_Enabled: 1
 --- !u!1 &5829047277507222163
 GameObject:
   m_ObjectHideFlags: 0
@@ -2481,20 +2458,5 @@ Transform:
 --- !u!198 &3084206172347010978 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 8135936492933121661, guid: 57197ac813628a44f845387f2e21d548, type: 3}
-  m_PrefabInstance: {fileID: 6495855384017045983}
-  m_PrefabAsset: {fileID: 0}
---- !u!199 &3800010416810510851 stripped
-ParticleSystemRenderer:
-  m_CorrespondingSourceObject: {fileID: 7969598210851423196, guid: 57197ac813628a44f845387f2e21d548, type: 3}
-  m_PrefabInstance: {fileID: 6495855384017045983}
-  m_PrefabAsset: {fileID: 0}
---- !u!199 &6226527958224285049 stripped
-ParticleSystemRenderer:
-  m_CorrespondingSourceObject: {fileID: 886356172282143910, guid: 57197ac813628a44f845387f2e21d548, type: 3}
-  m_PrefabInstance: {fileID: 6495855384017045983}
-  m_PrefabAsset: {fileID: 0}
---- !u!199 &8619125319637880390 stripped
-ParticleSystemRenderer:
-  m_CorrespondingSourceObject: {fileID: 3294562080508757913, guid: 57197ac813628a44f845387f2e21d548, type: 3}
   m_PrefabInstance: {fileID: 6495855384017045983}
   m_PrefabAsset: {fileID: 0}

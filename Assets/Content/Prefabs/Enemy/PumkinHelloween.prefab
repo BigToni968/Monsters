@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1526209799331306130}
   - component: {fileID: 5889126112202582955}
   - component: {fileID: 2844119492957245867}
-  - component: {fileID: 3471913509174209625}
   m_Layer: 0
   m_Name: PumkinHelloween
   m_TagString: Untagged
@@ -152,28 +151,6 @@ MonoBehaviour:
   IsBossMap2: 0
   IsBossMap3: 0
   Target: {fileID: 0}
---- !u!205 &3471913509174209625
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4996302617953441462}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 0, y: 0.30611634, z: -0.00018796325}
-  m_Size: 1
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.066044
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 1526209799331306130}
-    - renderer: {fileID: 1352890119616069324}
-    - renderer: {fileID: 8075839248783153590}
-    - renderer: {fileID: 5901826563653565065}
-  m_Enabled: 1
 --- !u!1001 &1836077194267806277
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -389,23 +366,8 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 8135936492933121661, guid: 57197ac813628a44f845387f2e21d548, type: 3}
   m_PrefabInstance: {fileID: 8962125034595990800}
   m_PrefabAsset: {fileID: 0}
---- !u!199 &1352890119616069324 stripped
-ParticleSystemRenderer:
-  m_CorrespondingSourceObject: {fileID: 7969598210851423196, guid: 57197ac813628a44f845387f2e21d548, type: 3}
-  m_PrefabInstance: {fileID: 8962125034595990800}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2865821880680444983 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6600778339328543015, guid: 57197ac813628a44f845387f2e21d548, type: 3}
-  m_PrefabInstance: {fileID: 8962125034595990800}
-  m_PrefabAsset: {fileID: 0}
---- !u!199 &5901826563653565065 stripped
-ParticleSystemRenderer:
-  m_CorrespondingSourceObject: {fileID: 3294562080508757913, guid: 57197ac813628a44f845387f2e21d548, type: 3}
-  m_PrefabInstance: {fileID: 8962125034595990800}
-  m_PrefabAsset: {fileID: 0}
---- !u!199 &8075839248783153590 stripped
-ParticleSystemRenderer:
-  m_CorrespondingSourceObject: {fileID: 886356172282143910, guid: 57197ac813628a44f845387f2e21d548, type: 3}
   m_PrefabInstance: {fileID: 8962125034595990800}
   m_PrefabAsset: {fileID: 0}
