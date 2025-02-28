@@ -39,7 +39,18 @@ namespace Assets.Content.Scripts.Enemy
 
         private void Start()
         {
-            InfoUnit.SetName(names[0]);
+            if (YandexGame.EnvironmentData.language == "ru")
+            {
+                InfoUnit.SetName(names[0]);
+            }
+            else if (YandexGame.EnvironmentData.language == "en")
+            {
+                //InfoUnit.SetName(names[1]);
+            }
+            else if (YandexGame.EnvironmentData.language == "tr")
+            {
+                //InfoUnit.SetName(names[2]);
+            }
             SetOptions();
             _controller = new EnemyController(this);
             _controller.Switch(new EnemyIdleState(_controller));

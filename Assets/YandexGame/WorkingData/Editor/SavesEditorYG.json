@@ -1,0 +1,67 @@
+{
+    "idSave": 27,
+    "isFirstSession": false,
+    "language": "ru",
+    "promptDone": false,
+    "money": 1,
+    "newPlayerName": "Hello!",
+    "openLevels": [
+        false,
+        true,
+        false
+    ],
+    "RewardData": {
+        "LastTime": "27.02.2025 0:00:00",
+        "AllRewards": 7,
+        "TakeCount": 0,
+        "NotakeCount": 1,
+        "Rewards": [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
+    "ItemsEquipment": [
+        0,
+        3,
+        6,
+        7,
+        9,
+        10,
+        9
+    ],
+    "OpenUnit": 1,
+    "ItemTypes": [],
+    "Chests": [
+        1,
+        2
+    ],
+    "Items": [
+        0,
+        1,
+        2
+    ],
+    "Money": 0.0,
+    "Score": 0.0,
+    "NeedScore": 0.0,
+    "CurrentScore": 0.0,
+    "CurrentLevel": 0,
+    "NeedLevel": 1,
+    "CurrentIdPlayer": 0,
+    "MaxHealthPlayer": 10.0,
+    "CurrentHealthPlayer": 10.0,
+    "DamagePlayer": 3.0,
+    "BuyBuffExp": 1.0,
+    "BuyBuffGold": 1.0,
+    "TotalUpgradeDamage": 0,
+    "TotalUpgradeHealth": 0,
+    "TotalUpgradeExp": 0,
+    "TotalUpgradeGold": 0,
+    "IsBossDeathMap1": false,
+    "IsBossDeathMap2": false,
+    "IsBossDeathMap3": false
+}
