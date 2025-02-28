@@ -39,6 +39,20 @@ namespace YG
         public float MaxHealthPlayer = 10;
         public float CurrentHealthPlayer = 10;
         public float DamagePlayer = 3;
+        
+        
+        public float BuyBuffExp = 1;
+        public float BuyBuffGold = 1;
+
+        public int TotalUpgradeDamage;
+        public int TotalUpgradeHealth;
+        public int TotalUpgradeExp;
+        public int TotalUpgradeGold;
+
+        public bool IsBossDeathMap1;
+        public bool IsBossDeathMap2;
+        public bool IsBossDeathMap3;
+
         // ...
 
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны

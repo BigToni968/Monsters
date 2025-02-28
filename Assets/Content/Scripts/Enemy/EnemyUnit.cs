@@ -6,6 +6,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using YG;
 using Random = UnityEngine.Random;
 
 namespace Assets.Content.Scripts.Enemy
@@ -29,6 +30,9 @@ namespace Assets.Content.Scripts.Enemy
         public bool IsActive;
         public bool IsDeath;
         public bool IsPassive;
+        public bool IsBossMap1 = false;
+        public bool IsBossMap2 = false;
+        public bool IsBossMap3 = false;
         public Transform Target;
 
         private Material[] _originalMaterials;
@@ -39,7 +43,7 @@ namespace Assets.Content.Scripts.Enemy
             SetOptions();
             _controller = new EnemyController(this);
             _controller.Switch(new EnemyIdleState(_controller));
-           
+
             if (_meshRenderer != null)
             {
                 _originalMaterials = _meshRenderer.materials;
@@ -67,6 +71,22 @@ namespace Assets.Content.Scripts.Enemy
 
             if (CurrentHealth <= 0)
             {
+                if (IsBossMap1)
+                {
+                    YandexGame.savesData.IsBossDeathMap1 = true;
+                    YandexGame.SaveProgress();
+                }
+                if (IsBossMap2)
+                {
+                    YandexGame.savesData.IsBossDeathMap2 = true;
+                    YandexGame.SaveProgress();
+                }
+                if (IsBossMap3)
+                {
+                    YandexGame.savesData.IsBossDeathMap3 = true;
+                    YandexGame.SaveProgress();
+                }
+
                 IsDeath = true;
                 IsActive = false;
                 Target = null;
@@ -112,7 +132,7 @@ namespace Assets.Content.Scripts.Enemy
             CurrentHealth = Model.Health;
             MaxHealth = Model.Health;
         }
-        
+
         public void ActivateDamageBox()
         {
             _damageBox.SetDamage(Model.Damage);

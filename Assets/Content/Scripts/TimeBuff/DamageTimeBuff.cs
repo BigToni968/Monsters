@@ -11,14 +11,14 @@ namespace Assets.Content.Scripts.TimeBuff
         public override void Active()
         {
             base.Active();
-            UnitController.Instance.DamagePlayer *= value;
+            UnitController.Instance.DamagePlayerBuff += UnitController.Instance.DamagePlayerStatic;
             MainUI.Instance.SetStat();
         }
 
         public override void Deactivate()
         {
             base.Deactivate();
-            UnitController.Instance.DamagePlayer /= value;
+            UnitController.Instance.DamagePlayerBuff = 0;
             MainUI.Instance.SetStat();
         }
     }

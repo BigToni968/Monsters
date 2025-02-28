@@ -60,7 +60,7 @@ namespace Assets.Content.Scripts.Others
         {
             UnitController.Instance.MaxHealthPlayer += health;
             UnitController.Instance.CurrentHealthPlayer = UnitController.Instance.MaxHealthPlayer;
-            UnitController.Instance.DamagePlayer += damage;
+            UnitController.Instance.DamagePlayerStatic += damage;
             MainUI.Instance.SetStat();
         }
         public void Deactivate()
@@ -85,7 +85,7 @@ namespace Assets.Content.Scripts.Others
             YandexGame.savesData.OpenUnit += 1;
             YandexGame.savesData.MaxHealthPlayer = UnitController.Instance.MaxHealthPlayer;
             YandexGame.savesData.CurrentHealthPlayer = UnitController.Instance.CurrentHealthPlayer;
-            YandexGame.savesData.DamagePlayer = UnitController.Instance.DamagePlayer;
+            YandexGame.savesData.DamagePlayer = UnitController.Instance.DamagePlayerStatic;
 
             YandexGame.SaveProgress();
         }
@@ -94,7 +94,7 @@ namespace Assets.Content.Scripts.Others
             YandexGame.LoadProgress();
             UnitController.Instance.MaxHealthPlayer += YandexGame.savesData.MaxHealthPlayer;
             UnitController.Instance.CurrentHealthPlayer = YandexGame.savesData.CurrentHealthPlayer;
-            UnitController.Instance.DamagePlayer += YandexGame.savesData.DamagePlayer;
+            UnitController.Instance.DamagePlayerStatic += YandexGame.savesData.DamagePlayer;
             MainUI.Instance.SetStat();
         }
     }

@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 3910649537280951695}
   - component: {fileID: 5032088642607431561}
   - component: {fileID: 676836503419168424}
+  - component: {fileID: 8315715477202335696}
   m_Layer: 0
   m_Name: Werewolf
   m_TagString: Untagged
@@ -247,7 +248,32 @@ MonoBehaviour:
   IsActive: 0
   IsDeath: 0
   IsPassive: 0
+  IsBossMap1: 0
+  IsBossMap2: 0
+  IsBossMap3: 0
   Target: {fileID: 0}
+--- !u!205 &8315715477202335696
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434873415825293559}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.08538532, y: 0.6514385, z: 0.20568234}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.031959537
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 122216979179282940}
+    - renderer: {fileID: 7162826596845995654}
+    - renderer: {fileID: 4797215588488422841}
+    - renderer: {fileID: 174248472923817751}
+  m_Enabled: 1
 --- !u!1 &597697198980580251
 GameObject:
   m_ObjectHideFlags: 0
@@ -2946,6 +2972,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57197ac813628a44f845387f2e21d548, type: 3}
+--- !u!199 &122216979179282940 stripped
+ParticleSystemRenderer:
+  m_CorrespondingSourceObject: {fileID: 7969598210851423196, guid: 57197ac813628a44f845387f2e21d548, type: 3}
+  m_PrefabInstance: {fileID: 8010638100254679584}
+  m_PrefabAsset: {fileID: 0}
 --- !u!198 &2288716786680030301 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 8135936492933121661, guid: 57197ac813628a44f845387f2e21d548, type: 3}
@@ -2954,5 +2985,15 @@ ParticleSystem:
 --- !u!4 &3796864363674381063 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6600778339328543015, guid: 57197ac813628a44f845387f2e21d548, type: 3}
+  m_PrefabInstance: {fileID: 8010638100254679584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!199 &4797215588488422841 stripped
+ParticleSystemRenderer:
+  m_CorrespondingSourceObject: {fileID: 3294562080508757913, guid: 57197ac813628a44f845387f2e21d548, type: 3}
+  m_PrefabInstance: {fileID: 8010638100254679584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!199 &7162826596845995654 stripped
+ParticleSystemRenderer:
+  m_CorrespondingSourceObject: {fileID: 886356172282143910, guid: 57197ac813628a44f845387f2e21d548, type: 3}
   m_PrefabInstance: {fileID: 8010638100254679584}
   m_PrefabAsset: {fileID: 0}

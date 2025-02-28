@@ -8,7 +8,7 @@ namespace Assets.Content.Scripts.Statbuff
 
         private void OnEnable()
         {
-            Active();
+            //Active();
         }
 
         private void OnDisable()

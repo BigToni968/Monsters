@@ -1,6 +1,8 @@
-﻿using Assets.Content.Scripts.UI;
+﻿using Assets.Content.Scripts.Player;
+using Assets.Content.Scripts.UI;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.UI;
 using YG;
 
 namespace Assets.Content.Scripts.Unit
@@ -10,10 +12,15 @@ namespace Assets.Content.Scripts.Unit
         [SerializeField] private Rigidbody _unitRb;
         [SerializeField] private CinemachineVirtualCamera _virtualCamera;
         [SerializeField] private Animator[] _animators;
+        [SerializeField] private WindowMobileController _windowMobileController;
+        [SerializeField] private Button _buttonAttack;
+        [SerializeField] private PlayerUnit _currentUnit;
 
+        public float RotationCameraSpeedMobile;
         public float MaxHealthPlayer;
         public float CurrentHealthPlayer;
-        public float DamagePlayer;
+        public float DamagePlayerStatic;
+        public float DamagePlayerBuff;
         public bool IsMobile;
         public float MoveSpeed;
         public float RotationPayerSpeed;
@@ -39,10 +46,10 @@ namespace Assets.Content.Scripts.Unit
                 return;
             }
 
-            Instance = this;           
-            
+            Instance = this;
+
             var randomInt = Random.Range(1, 10000);
-            
+
             if (YandexGame.playerName == "unauthorized" || YandexGame.playerName == "")
             {
                 if (YandexGame.EnvironmentData.language == "ru")
@@ -61,12 +68,44 @@ namespace Assets.Content.Scripts.Unit
 
             InfoUnit.SetName(YandexGame.playerName);
             _cinemachineTransposer = _virtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
+
+            IsMobile = Application.isMobilePlatform;
+            if (IsMobile)
+            {
+                _windowMobileController.Show();
+            }
+            else
+            {
+                _windowMobileController.Hide();
+            }
         }
 
+        public void Save()
+        {
+            YandexGame.savesData.MaxHealthPlayer = MaxHealthPlayer;
+            YandexGame.savesData.CurrentHealthPlayer = CurrentHealthPlayer;
+            YandexGame.savesData.DamagePlayer = DamagePlayerStatic;
+
+            YandexGame.SaveProgress();
+        }
         private void Update()
         {
             UpdateHealth();
             Zoom();
+            if (IsMobile)
+            {
+                if (MainUI.Instance.AutoAttack)
+                {
+                    _buttonAttack.gameObject.SetActive(false);
+                }
+                else
+                {
+                    _buttonAttack.gameObject.SetActive(true);
+                }
+                MobileRotate();
+                MobileMove();
+                return;
+            }
             HandleController();
             if (Input.GetMouseButton(1))
             {
@@ -88,6 +127,14 @@ namespace Assets.Content.Scripts.Unit
             }
         }
 
+        public void Attack()
+        {
+            _currentUnit.Animator.SetTrigger("IsAttack");
+        }
+        public void SetUnit(PlayerUnit unit)
+        {
+            _currentUnit = unit;
+        }
         private void HandleController()
         {
             float verticalInput = Input.GetAxis("Vertical");
@@ -120,7 +167,38 @@ namespace Assets.Content.Scripts.Unit
                 _unitRb.velocity = new Vector3(0, _unitRb.velocity.y, 0);
             }
         }
+        public void MobileRotate()
+        {
+            float horizontalInput = _windowMobileController.Rotate.x;
+            float verticalInput = _windowMobileController.Rotate.y;
+            float lookAxisUp = 0;
+            float lookAxisRight = 0;
 
+            if (_windowMobileController.CameraControllerPanel.pressed)
+            {
+                foreach (Touch touch in Input.touches)
+                {
+                    if (touch.fingerId == _windowMobileController.CameraControllerPanel.fingerId)
+                    {
+                        if (touch.phase == TouchPhase.Moved)
+                        {
+                            lookAxisUp = -verticalInput * RotationCameraSpeedMobile;
+                            lookAxisRight = horizontalInput * RotationCameraSpeedMobile;
+                        }
+                    }
+                }
+            }
+
+            _virtualCamera.transform.Rotate(new Vector3(lookAxisUp * Time.deltaTime, lookAxisRight * Time.deltaTime, 0));
+            _virtualCamera.transform.rotation = Quaternion.Euler(NormalizeAngle(_virtualCamera.transform.eulerAngles.x), NormalizeAngle(_virtualCamera.transform.eulerAngles.y), 0);
+
+            float currentXRotation = NormalizeAngle(_virtualCamera.transform.eulerAngles.x);
+            if (currentXRotation < 0)
+            {
+                currentXRotation = 0;
+            }
+            _virtualCamera.transform.rotation = Quaternion.Euler(currentXRotation, NormalizeAngle(_virtualCamera.transform.eulerAngles.y), 0);
+        }
         private void Rotation(float angle)
         {
             float currentAngle = transform.eulerAngles.y;
@@ -132,8 +210,38 @@ namespace Assets.Content.Scripts.Unit
                 Move();
             }
         }
+        private void MobileMove()
+        {
+            Vector3 forward = _virtualCamera.transform.forward;
+            Vector3 right = _virtualCamera.transform.right;
 
+            forward.y = 0;
+            right.y = 0;
 
+            forward.Normalize();
+            right.Normalize();
+
+            float horizontalInput = _windowMobileController.Move.x;
+            float verticalInput = _windowMobileController.Move.y;
+
+            Vector3 direction = (forward * verticalInput + right * horizontalInput).normalized;
+
+            SetAnimationSpeed(direction.magnitude);
+
+            if (direction.magnitude >= 0.1f)
+            {
+                Vector3 targetVelocity = direction * (MoveSpeed * BuffSpeed);
+
+                _unitRb.velocity = new Vector3(targetVelocity.x, _unitRb.velocity.y, targetVelocity.z);
+
+                Quaternion targetRotation = Quaternion.LookRotation(direction);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
+            }
+            else
+            {
+                _unitRb.velocity = new Vector3(0, _unitRb.velocity.y, 0);
+            }
+        }
 
         private void Move()
         {
@@ -143,10 +251,7 @@ namespace Assets.Content.Scripts.Unit
 
         private void SetAnimationSpeed(float speed)
         {
-            foreach (var animator in _animators)
-            {
-                animator.SetFloat("Speed", speed);
-            }
+            _currentUnit.Animator.SetFloat("Speed", speed);
         }
 
         private void SwitchCamera()
@@ -168,13 +273,18 @@ namespace Assets.Content.Scripts.Unit
 
         private void Zoom()
         {
-            float scrollDelta = Input.mouseScrollDelta.y;
+            float scrollDelta = IsMobile ? _windowMobileController.Zoom : Input.mouseScrollDelta.y;
 
-            float newZoom = _cinemachineTransposer.m_CameraDistance + -scrollDelta * SpeedScroll;
+            float newZoom = _cinemachineTransposer.m_CameraDistance + (-scrollDelta) * SpeedScroll;
 
             _cinemachineTransposer.m_CameraDistance = Mathf.Clamp(newZoom, OffsetZoom.x, OffsetZoom.y);
         }
-
+        private float NormalizeAngle(float angle)
+        {
+            if (angle > 180)
+                angle -= 360;
+            return angle;
+        }
         private void UpdateHealth()
         {
             InfoUnit.SetHealth(CurrentHealthPlayer, MaxHealthPlayer);

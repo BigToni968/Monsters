@@ -36,6 +36,7 @@ namespace Assets.Content.Scripts.UI
         [SerializeField] private Transform _unitController;
         [SerializeField] private Canvas[] _allCanvas;
 
+        public OpenPortal OpenPortal;
         public Slider SliderGoldBuff;
         public Slider SliderExpBuff;
         public Slider SliderDamageBuff;
@@ -46,6 +47,8 @@ namespace Assets.Content.Scripts.UI
         public int CurrentIdPlayer;
         public float BuffExp = 1;
         public float BuffGold = 1;
+        public float BuyBuffGold = 1;
+        public float BuyBuffExp = 1;
 
         [SerializeField] public static MainUI Instance { get; private set; }
 
@@ -128,13 +131,14 @@ namespace Assets.Content.Scripts.UI
         public void AddScore(float score, float money)
         {
             ChangeMoney(money);
-            Score += (score * BuffExp);
+            Score += (score * BuffExp * BuyBuffExp);
             Score = Mathf.Clamp(Score, 0, _upgradeManager.LevelsData[_upgradeManager.LevelsData.Length - 1].Score);
 
-            CurrentScore += (score * BuffExp);
+            CurrentScore += (score * BuffExp * BuyBuffExp);
             _upgradeManager.Upgrade();
             SetTextLevel();
             Save();
+            OpenPortal.SetBarrier();
         }
 
         public void SetTextLevel()
@@ -213,7 +217,7 @@ namespace Assets.Content.Scripts.UI
 
         public bool IsCanvasEnable()
         {
-            return _allCanvas[0].enabled || _allCanvas[1].enabled || _allCanvas[2].enabled || _allCanvas[3].enabled || _allCanvas[4].enabled || _allCanvas[5].enabled;
+            return _allCanvas[0].enabled || _allCanvas[1].enabled || _allCanvas[2].enabled || _allCanvas[3].enabled || _allCanvas[4].enabled || _allCanvas[5].enabled || _allCanvas[6].enabled;
         }
 
         public void ChangeMoney(float money)
@@ -224,7 +228,7 @@ namespace Assets.Content.Scripts.UI
             }
             else
             {
-                Money += (money * BuffGold);
+                Money += (money * BuffGold * BuyBuffGold);
             }
 
             Money = Mathf.Clamp(Money, 0, float.MaxValue);
@@ -241,7 +245,7 @@ namespace Assets.Content.Scripts.UI
         public void SetStat()
         {
             _healthMaxStat.SetText($"{new IdleCurrency(UnitController.Instance.MaxHealthPlayer).ToShortString()}");
-            _damageMaxStat.SetText($"{new IdleCurrency(UnitController.Instance.DamagePlayer).ToShortString()}");
+            _damageMaxStat.SetText($"{new IdleCurrency(UnitController.Instance.DamagePlayerStatic + UnitController.Instance.DamagePlayerBuff).ToShortString()}");
         }
     }
 }

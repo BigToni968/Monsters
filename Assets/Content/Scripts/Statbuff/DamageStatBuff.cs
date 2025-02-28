@@ -11,15 +11,16 @@ namespace Assets.Content.Scripts.Statbuff
         public override void Active()
         {
             base.Active();
-            UnitController.Instance.DamagePlayer += value;
+            UnitController.Instance.DamagePlayerStatic += value;
             MainUI.Instance.SetStat();
         }
 
         public override void Deactivate()
         {
             base.Deactivate();
-            UnitController.Instance.DamagePlayer -= value;
+            UnitController.Instance.DamagePlayerStatic -= value;
             MainUI.Instance.SetStat();
+            UnitController.Instance.Save();
         }
     }
 }

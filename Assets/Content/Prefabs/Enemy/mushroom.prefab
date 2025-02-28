@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2023947272516329281}
   - component: {fileID: 4884139740888135531}
   - component: {fileID: 4158344217496860328}
+  - component: {fileID: 4956390266219616715}
   m_Layer: 0
   m_Name: mushroom
   m_TagString: Untagged
@@ -148,7 +149,32 @@ MonoBehaviour:
   IsActive: 0
   IsDeath: 0
   IsPassive: 1
+  IsBossMap1: 0
+  IsBossMap2: 0
+  IsBossMap3: 0
   Target: {fileID: 0}
+--- !u!205 &4956390266219616715
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496774150797097948}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.047819197, y: 0.23559079, z: -0.01890412}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.066044
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 2023947272516329281}
+    - renderer: {fileID: 724670237575547586}
+    - renderer: {fileID: 7555844846016294328}
+    - renderer: {fileID: 5273603172423437959}
+  m_Enabled: 1
 --- !u!1001 &7248324680428177694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -218,6 +244,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57197ac813628a44f845387f2e21d548, type: 3}
+--- !u!199 &724670237575547586 stripped
+ParticleSystemRenderer:
+  m_CorrespondingSourceObject: {fileID: 7969598210851423196, guid: 57197ac813628a44f845387f2e21d548, type: 3}
+  m_PrefabInstance: {fileID: 7248324680428177694}
+  m_PrefabAsset: {fileID: 0}
 --- !u!198 &1477074878270328675 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 8135936492933121661, guid: 57197ac813628a44f845387f2e21d548, type: 3}
@@ -226,6 +257,16 @@ ParticleSystem:
 --- !u!4 &4543450368102301753 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6600778339328543015, guid: 57197ac813628a44f845387f2e21d548, type: 3}
+  m_PrefabInstance: {fileID: 7248324680428177694}
+  m_PrefabAsset: {fileID: 0}
+--- !u!199 &5273603172423437959 stripped
+ParticleSystemRenderer:
+  m_CorrespondingSourceObject: {fileID: 3294562080508757913, guid: 57197ac813628a44f845387f2e21d548, type: 3}
+  m_PrefabInstance: {fileID: 7248324680428177694}
+  m_PrefabAsset: {fileID: 0}
+--- !u!199 &7555844846016294328 stripped
+ParticleSystemRenderer:
+  m_CorrespondingSourceObject: {fileID: 886356172282143910, guid: 57197ac813628a44f845387f2e21d548, type: 3}
   m_PrefabInstance: {fileID: 7248324680428177694}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7992152301808407490

@@ -42,7 +42,13 @@ namespace Assets.Content.Scripts.Player
         private void Attack()
         {
             if (MainUI.Instance.IsCanvasEnable()) return;
-            if (Input.GetMouseButtonDown(0) || MainUI.Instance.AutoAttack)
+            if (MainUI.Instance.AutoAttack)
+            {
+                Animator.SetTrigger("IsAttack");
+                return;
+            }
+            if (UnitController.Instance.IsMobile) return;
+            if (Input.GetMouseButtonDown(0))
             {
                 Animator.SetTrigger("IsAttack");
             }
@@ -50,7 +56,7 @@ namespace Assets.Content.Scripts.Player
 
         public void ActivateDamageBox()
         {
-            _damageBox.SetDamage(UnitController.Instance.DamagePlayer);
+            _damageBox.SetDamage(UnitController.Instance.DamagePlayerStatic + UnitController.Instance.DamagePlayerBuff);
             _damageBox.gameObject.SetActive(true);
         }
 
@@ -125,6 +131,7 @@ namespace Assets.Content.Scripts.Player
         }
         public void Activate()
         {
+            UnitController.Instance.SetUnit(this);
             _meshRenderer.enabled = true;
             _boxCollider.enabled = true;
             enabled = true;

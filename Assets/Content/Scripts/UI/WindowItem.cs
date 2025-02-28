@@ -167,25 +167,31 @@ namespace Assets.Content.Scripts.UI
         {
             _isAds = true;
             _item = _itemsForAds[index];
-            if(index == 0)
+            if (index == 0)
             {
-                _expTimeBuff.Removed += () =>
+                if (_expTimeBuff != null)
                 {
+                    _expTimeBuff.Removed += () =>
+                    {
                     MainUI.Instance.SliderExpBuff.value = MainUI.Instance.SliderExpBuff.maxValue;
                     MainUI.Instance.SliderExpBuff.gameObject.SetActive(false);
                     _itemsUseList.Remove(TypeItems.Exp);
-                };
-                Destroy(_expTimeBuff);
+                    };
+                    Destroy(_expTimeBuff);
+                }
             }
-            if(index == 1)
+            if (index == 1)
             {
-                _damageTimeBuff.Removed += () =>
+                if (_damageTimeBuff != null)
                 {
-                    MainUI.Instance.SliderDamageBuff.value = MainUI.Instance.SliderDamageBuff.maxValue;
-                    MainUI.Instance.SliderDamageBuff.gameObject.SetActive(false);
-                    _itemsUseList.Remove(TypeItems.Damage);
-                };
-                Destroy(_damageTimeBuff);
+                    _damageTimeBuff.Removed += () =>
+                    {
+                        MainUI.Instance.SliderDamageBuff.value = MainUI.Instance.SliderDamageBuff.maxValue;
+                        MainUI.Instance.SliderDamageBuff.gameObject.SetActive(false);
+                        _itemsUseList.Remove(TypeItems.Damage);
+                    };
+                    Destroy(_damageTimeBuff);
+                }
             }
             Use();
         }

@@ -1,12 +1,9 @@
 using Assets.Content.Scripts.Others;
 using Assets.Content.Scripts.Player;
 using Assets.Content.Scripts.UI.Weak;
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using YG;
-using static UnityEditor.Progress;
 
 namespace Assets.Content.Scripts.UI
 {

@@ -1301,6 +1301,7 @@ GameObject:
   - component: {fileID: 8920044375336131841}
   - component: {fileID: 5100938085689238781}
   - component: {fileID: 1427364184460282564}
+  - component: {fileID: 1312815544209694796}
   m_Layer: 0
   m_Name: MonsterPlant
   m_TagString: Untagged
@@ -1409,7 +1410,32 @@ MonoBehaviour:
   IsActive: 0
   IsDeath: 0
   IsPassive: 0
+  IsBossMap1: 0
+  IsBossMap2: 0
+  IsBossMap3: 0
   Target: {fileID: 0}
+--- !u!205 &1312815544209694796
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6659400376218541034}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.04021454, y: 0.72941923, z: -0.09757924}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.047504816
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 8706841277907235095}
+    - renderer: {fileID: 1873956379092784749}
+    - renderer: {fileID: 4320636057282377042}
+    - renderer: {fileID: 697217057447284467}
+  m_Enabled: 1
 --- !u!1 &6957872882607490403
 GameObject:
   m_ObjectHideFlags: 0
@@ -1924,6 +1950,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57197ac813628a44f845387f2e21d548, type: 3}
+--- !u!199 &1873956379092784749 stripped
+ParticleSystemRenderer:
+  m_CorrespondingSourceObject: {fileID: 886356172282143910, guid: 57197ac813628a44f845387f2e21d548, type: 3}
+  m_PrefabInstance: {fileID: 1607038893532459723}
+  m_PrefabAsset: {fileID: 0}
+--- !u!199 &4320636057282377042 stripped
+ParticleSystemRenderer:
+  m_CorrespondingSourceObject: {fileID: 3294562080508757913, guid: 57197ac813628a44f845387f2e21d548, type: 3}
+  m_PrefabInstance: {fileID: 1607038893532459723}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5609222025797729260 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6600778339328543015, guid: 57197ac813628a44f845387f2e21d548, type: 3}
@@ -1932,6 +1968,11 @@ Transform:
 --- !u!198 &7396597761175958710 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 8135936492933121661, guid: 57197ac813628a44f845387f2e21d548, type: 3}
+  m_PrefabInstance: {fileID: 1607038893532459723}
+  m_PrefabAsset: {fileID: 0}
+--- !u!199 &8706841277907235095 stripped
+ParticleSystemRenderer:
+  m_CorrespondingSourceObject: {fileID: 7969598210851423196, guid: 57197ac813628a44f845387f2e21d548, type: 3}
   m_PrefabInstance: {fileID: 1607038893532459723}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5203656477969549829

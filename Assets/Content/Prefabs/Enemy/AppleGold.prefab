@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8233666560936525192}
   - component: {fileID: 2442729125466120565}
   - component: {fileID: 7000607997176776752}
+  - component: {fileID: 1354997861471740884}
   m_Layer: 0
   m_Name: AppleGold
   m_TagString: Untagged
@@ -128,6 +129,9 @@ MonoBehaviour:
   IsActive: 0
   IsDeath: 0
   IsPassive: 1
+  IsBossMap1: 0
+  IsBossMap2: 0
+  IsBossMap3: 0
   Target: {fileID: 0}
 --- !u!65 &7000607997176776752
 BoxCollider:
@@ -150,6 +154,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.14035839, y: 0.15942091, z: 0.128}
   m_Center: {x: -0.0062077455, y: 0.0789001, z: 0.0000012367964}
+--- !u!205 &1354997861471740884
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3969160256937666042}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.0062077492, y: 0.0789001, z: 0.0000012367964}
+  m_Size: 0.15942091
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.039958052
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 8233666560936525192}
+    - renderer: {fileID: 5643413863373819231}
+    - renderer: {fileID: 3207728851741321765}
+    - renderer: {fileID: 968413123762997530}
+  m_Enabled: 1
 --- !u!1001 &2362380288736759427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -219,6 +245,21 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57197ac813628a44f845387f2e21d548, type: 3}
+--- !u!199 &968413123762997530 stripped
+ParticleSystemRenderer:
+  m_CorrespondingSourceObject: {fileID: 3294562080508757913, guid: 57197ac813628a44f845387f2e21d548, type: 3}
+  m_PrefabInstance: {fileID: 2362380288736759427}
+  m_PrefabAsset: {fileID: 0}
+--- !u!199 &3207728851741321765 stripped
+ParticleSystemRenderer:
+  m_CorrespondingSourceObject: {fileID: 886356172282143910, guid: 57197ac813628a44f845387f2e21d548, type: 3}
+  m_PrefabInstance: {fileID: 2362380288736759427}
+  m_PrefabAsset: {fileID: 0}
+--- !u!199 &5643413863373819231 stripped
+ParticleSystemRenderer:
+  m_CorrespondingSourceObject: {fileID: 7969598210851423196, guid: 57197ac813628a44f845387f2e21d548, type: 3}
+  m_PrefabInstance: {fileID: 2362380288736759427}
+  m_PrefabAsset: {fileID: 0}
 --- !u!198 &5773750483233573118 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 8135936492933121661, guid: 57197ac813628a44f845387f2e21d548, type: 3}

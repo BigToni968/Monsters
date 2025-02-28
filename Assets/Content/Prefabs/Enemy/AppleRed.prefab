@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 492195247304118113}
   - component: {fileID: 7697171425675926920}
   - component: {fileID: 8738079794432156808}
+  - component: {fileID: 8057689721803348243}
   m_Layer: 0
   m_Name: AppleRed
   m_TagString: Untagged
@@ -128,6 +129,9 @@ MonoBehaviour:
   IsActive: 0
   IsDeath: 0
   IsPassive: 1
+  IsBossMap1: 0
+  IsBossMap2: 0
+  IsBossMap3: 0
   Target: {fileID: 0}
 --- !u!65 &8738079794432156808
 BoxCollider:
@@ -150,6 +154,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.14035839, y: 0.15942091, z: 0.128}
   m_Center: {x: -0.0062077455, y: 0.0789001, z: 0.0000012367964}
+--- !u!205 &8057689721803348243
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7912465027249618655}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.0062077492, y: 0.0789001, z: 0.0000012367964}
+  m_Size: 0.15942091
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.03528118
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 492195247304118113}
+    - renderer: {fileID: 4567732582150209536}
+    - renderer: {fileID: 6752747359504164730}
+    - renderer: {fileID: 8953940071121912901}
+  m_Enabled: 1
 --- !u!1001 &4827254773479096679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -368,5 +394,20 @@ Transform:
 --- !u!198 &2383192476950414753 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 8135936492933121661, guid: 57197ac813628a44f845387f2e21d548, type: 3}
+  m_PrefabInstance: {fileID: 5907152386180891612}
+  m_PrefabAsset: {fileID: 0}
+--- !u!199 &4567732582150209536 stripped
+ParticleSystemRenderer:
+  m_CorrespondingSourceObject: {fileID: 7969598210851423196, guid: 57197ac813628a44f845387f2e21d548, type: 3}
+  m_PrefabInstance: {fileID: 5907152386180891612}
+  m_PrefabAsset: {fileID: 0}
+--- !u!199 &6752747359504164730 stripped
+ParticleSystemRenderer:
+  m_CorrespondingSourceObject: {fileID: 886356172282143910, guid: 57197ac813628a44f845387f2e21d548, type: 3}
+  m_PrefabInstance: {fileID: 5907152386180891612}
+  m_PrefabAsset: {fileID: 0}
+--- !u!199 &8953940071121912901 stripped
+ParticleSystemRenderer:
+  m_CorrespondingSourceObject: {fileID: 3294562080508757913, guid: 57197ac813628a44f845387f2e21d548, type: 3}
   m_PrefabInstance: {fileID: 5907152386180891612}
   m_PrefabAsset: {fileID: 0}

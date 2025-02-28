@@ -617,6 +617,7 @@ GameObject:
   - component: {fileID: 3959008521547160349}
   - component: {fileID: 3858037647819390648}
   - component: {fileID: 8637787523010666729}
+  - component: {fileID: 3001061178167547997}
   m_Layer: 0
   m_Name: RatAssassin
   m_TagString: Untagged
@@ -725,7 +726,33 @@ MonoBehaviour:
   IsActive: 0
   IsDeath: 0
   IsPassive: 0
+  IsBossMap1: 0
+  IsBossMap2: 0
+  IsBossMap3: 0
   Target: {fileID: 0}
+--- !u!205 &3001061178167547997
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261505673853658811}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.0010967255, y: 0.69405115, z: 0.027237415}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.04882462
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 3922128018150806934}
+    - renderer: {fileID: 6105607593764664044}
+    - renderer: {fileID: 8453013775567376851}
+    - renderer: {fileID: 9048963447894213105}
+    - renderer: {fileID: 1085805363405234752}
+  m_Enabled: 1
 --- !u!1 &2193591930613556360
 GameObject:
   m_ObjectHideFlags: 0
@@ -2732,6 +2759,21 @@ Transform:
 --- !u!198 &2891072218798067767 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 8135936492933121661, guid: 57197ac813628a44f845387f2e21d548, type: 3}
+  m_PrefabInstance: {fileID: 6410735530780071498}
+  m_PrefabAsset: {fileID: 0}
+--- !u!199 &3922128018150806934 stripped
+ParticleSystemRenderer:
+  m_CorrespondingSourceObject: {fileID: 7969598210851423196, guid: 57197ac813628a44f845387f2e21d548, type: 3}
+  m_PrefabInstance: {fileID: 6410735530780071498}
+  m_PrefabAsset: {fileID: 0}
+--- !u!199 &6105607593764664044 stripped
+ParticleSystemRenderer:
+  m_CorrespondingSourceObject: {fileID: 886356172282143910, guid: 57197ac813628a44f845387f2e21d548, type: 3}
+  m_PrefabInstance: {fileID: 6410735530780071498}
+  m_PrefabAsset: {fileID: 0}
+--- !u!199 &8453013775567376851 stripped
+ParticleSystemRenderer:
+  m_CorrespondingSourceObject: {fileID: 3294562080508757913, guid: 57197ac813628a44f845387f2e21d548, type: 3}
   m_PrefabInstance: {fileID: 6410735530780071498}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6793811848856239550
