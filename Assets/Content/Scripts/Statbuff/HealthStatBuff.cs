@@ -19,7 +19,6 @@ namespace Assets.Content.Scripts.Statbuff
             UnitController.Instance.MaxHealthPlayer -= value;
             UnitController.Instance.CurrentHealthPlayer -= value;
             MainUI.Instance.SetStat();
-            UnitController.Instance.Save();
         }
     }
 }

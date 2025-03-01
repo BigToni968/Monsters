@@ -20,7 +20,6 @@ namespace Assets.Content.Scripts.Statbuff
             base.Deactivate();
             UnitController.Instance.DamagePlayerStatic -= value;
             MainUI.Instance.SetStat();
-            UnitController.Instance.Save();
         }
     }
 }
