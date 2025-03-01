@@ -65,10 +65,10 @@ namespace Assets.Content.Scripts.Enemy
             }
         }
 
-        private void Update()
+        public void Tick()
         {
-            InfoUnit.SetHealth(CurrentHealth, MaxHealth);
             _controller?.OnUpdate();
+            InfoUnit.SetHealth(CurrentHealth, MaxHealth);
         }
 
         public void TakeDamage(float damage, Transform transform = null)
@@ -79,7 +79,6 @@ namespace Assets.Content.Scripts.Enemy
             Target = transform;
             CurrentHealth -= damage;
             CurrentHealth = Mathf.Clamp(CurrentHealth, 0f, MaxHealth);
-
             if (CurrentHealth <= 0)
             {
                 if (IsBossMap1)

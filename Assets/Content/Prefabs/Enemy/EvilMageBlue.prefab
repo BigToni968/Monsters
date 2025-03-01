@@ -1498,7 +1498,6 @@ GameObject:
   - component: {fileID: 2595351281246246605}
   - component: {fileID: 1279967141350518743}
   - component: {fileID: 6956817344029706657}
-  - component: {fileID: 1119907351245042385}
   m_Layer: 0
   m_Name: EvilMageBlue
   m_TagString: Untagged
@@ -1611,29 +1610,6 @@ MonoBehaviour:
   IsBossMap2: 0
   IsBossMap3: 0
   Target: {fileID: 0}
---- !u!205 &1119907351245042385
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6870328220909562755}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 0.022693276, y: 0.98682386, z: 0.19008034}
-  m_Size: 1
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.08581442
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 5195484730088595839}
-    - renderer: {fileID: 3084783993776555525}
-    - renderer: {fileID: 809240889153332538}
-    - renderer: {fileID: 2719965945582547586}
-    - renderer: {fileID: 8849566905851138402}
-  m_Enabled: 1
 --- !u!1 &6984660719355225918
 GameObject:
   m_ObjectHideFlags: 0
@@ -2417,21 +2393,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57197ac813628a44f845387f2e21d548, type: 3}
---- !u!199 &809240889153332538 stripped
-ParticleSystemRenderer:
-  m_CorrespondingSourceObject: {fileID: 3294562080508757913, guid: 57197ac813628a44f845387f2e21d548, type: 3}
-  m_PrefabInstance: {fileID: 2775240521135088291}
-  m_PrefabAsset: {fileID: 0}
---- !u!199 &3084783993776555525 stripped
-ParticleSystemRenderer:
-  m_CorrespondingSourceObject: {fileID: 886356172282143910, guid: 57197ac813628a44f845387f2e21d548, type: 3}
-  m_PrefabInstance: {fileID: 2775240521135088291}
-  m_PrefabAsset: {fileID: 0}
---- !u!199 &5195484730088595839 stripped
-ParticleSystemRenderer:
-  m_CorrespondingSourceObject: {fileID: 7969598210851423196, guid: 57197ac813628a44f845387f2e21d548, type: 3}
-  m_PrefabInstance: {fileID: 2775240521135088291}
-  m_PrefabAsset: {fileID: 0}
 --- !u!198 &6227077157687682270 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 8135936492933121661, guid: 57197ac813628a44f845387f2e21d548, type: 3}

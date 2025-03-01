@@ -35,6 +35,8 @@ namespace Assets.Content.Scripts.Unit
 
         private CinemachineFramingTransposer _cinemachineTransposer;
         private bool _isPOVMode;
+        private bool _isColliding;
+        private float initialCameraDistance = 5f;
 
         public static UnitController Instance { get; private set; } = null;
 
@@ -91,6 +93,7 @@ namespace Assets.Content.Scripts.Unit
         private void Update()
         {
             UpdateHealth();
+            HandleCollision();
             Zoom();
             if (IsMobile)
             {
@@ -261,7 +264,7 @@ namespace Assets.Content.Scripts.Unit
                 var pov = _virtualCamera.AddCinemachineComponent<CinemachinePOV>();
                 pov.m_VerticalAxis.Value = _virtualCamera.transform.eulerAngles.x;
                 pov.m_HorizontalAxis.Value = _virtualCamera.transform.eulerAngles.y;
-                pov.m_VerticalAxis.m_MinValue = 0f;
+                //pov.m_VerticalAxis.m_MinValue = -1f;
                 pov.m_VerticalAxis.m_MaxSpeed = OffsetSpeedCamera.y;
                 pov.m_HorizontalAxis.m_MaxSpeed = OffsetSpeedCamera.x;
             }
@@ -270,14 +273,37 @@ namespace Assets.Content.Scripts.Unit
                 _virtualCamera.DestroyCinemachineComponent<CinemachinePOV>();
             }
         }
-
-        private void Zoom()
+        private void HandleCollision()
         {
-            float scrollDelta = IsMobile ? _windowMobileController.Zoom : Input.mouseScrollDelta.y;
+            RaycastHit hit;
 
-            float newZoom = _cinemachineTransposer.m_CameraDistance + (-scrollDelta) * SpeedScroll;
+            if (Physics.Raycast(transform.position, -_virtualCamera.transform.forward, out hit, _cinemachineTransposer.m_CameraDistance, CollisionLayerCamera))
+            {
+                float distanceToObstacle = hit.distance;
+                _cinemachineTransposer.m_CameraDistance = Mathf.Clamp(distanceToObstacle, OffsetZoom.x, _cinemachineTransposer.m_CameraDistance);
+                _isColliding = true;
+            }
+            else if (_isColliding)
+            {
+                _cinemachineTransposer.m_CameraDistance = Mathf.Lerp(_cinemachineTransposer.m_CameraDistance, initialCameraDistance, Time.deltaTime * SpeedScroll);
+                if (Mathf.Abs(_cinemachineTransposer.m_CameraDistance - initialCameraDistance) < 1f)
+                {
+                    _isColliding = false;
+                }
+            }
+        }
+        private void Zoom()
+        {          
+            if (!_isColliding)
+            {
+                float scrollDelta = IsMobile ? _windowMobileController.Zoom : Input.mouseScrollDelta.y;
 
-            _cinemachineTransposer.m_CameraDistance = Mathf.Clamp(newZoom, OffsetZoom.x, OffsetZoom.y);
+                float newZoom = _cinemachineTransposer.m_CameraDistance + (-scrollDelta) * SpeedScroll;
+
+                _cinemachineTransposer.m_CameraDistance = Mathf.Clamp(newZoom, OffsetZoom.x, OffsetZoom.y);
+                
+                initialCameraDistance = _cinemachineTransposer.m_CameraDistance;
+            }
         }
         private float NormalizeAngle(float angle)
         {
