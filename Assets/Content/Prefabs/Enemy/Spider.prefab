@@ -1253,6 +1253,8 @@ MonoBehaviour:
     Money: 35
   names:
   - "\u041F\u0430\u0443\u043A"
+  - Spider
+  - "\xD6r\xFCmcek"
   Animator: {fileID: 2793907226208013812}
   InfoUnit: {fileID: 627117774211433694}
   CurrentHealth: 0
@@ -1260,6 +1262,9 @@ MonoBehaviour:
   IsActive: 0
   IsDeath: 0
   IsPassive: 0
+  IsBossMap1: 0
+  IsBossMap2: 0
+  IsBossMap3: 0
   Target: {fileID: 0}
 --- !u!1 &6846328703379865585
 GameObject:

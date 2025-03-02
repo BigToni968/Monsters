@@ -8,16 +8,16 @@ namespace Assets.Content.Scripts.Statbuff
         public override void Active()
         {
             base.Active();
-            UnitController.Instance.MaxHealthPlayer += value;
-            UnitController.Instance.CurrentHealthPlayer += value;
+            UnitController.Instance.HealthPlayerBuff += value;
+            //UnitController.Instance.CurrentHealthPlayer += value;
             MainUI.Instance.SetStat();
         }
 
         public override void Deactivate()
         {
             base.Deactivate();
-            UnitController.Instance.MaxHealthPlayer -= value;
-            UnitController.Instance.CurrentHealthPlayer -= value;
+            UnitController.Instance.HealthPlayerBuff -= value;
+            //UnitController.Instance.CurrentHealthPlayer -= value;
             MainUI.Instance.SetStat();
         }
     }

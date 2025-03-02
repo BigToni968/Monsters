@@ -18,7 +18,6 @@ namespace Assets.Content.Scripts.Others
         [SerializeField] private ParticleSystem _effectUpgrade;
         [SerializeField] private Animator _windowInventoryAnimator;
 
-        public List<PlayerUnit> OpenUnit = new List<PlayerUnit>();
         public LevelData[] LevelsData;
 
         private void Start()
@@ -92,9 +91,9 @@ namespace Assets.Content.Scripts.Others
         private void Load()
         {
             YandexGame.LoadProgress();
-            UnitController.Instance.MaxHealthPlayer += YandexGame.savesData.MaxHealthPlayer;
+            UnitController.Instance.MaxHealthPlayer = YandexGame.savesData.MaxHealthPlayer;
             UnitController.Instance.CurrentHealthPlayer = YandexGame.savesData.CurrentHealthPlayer;
-            UnitController.Instance.DamagePlayerStatic += YandexGame.savesData.DamagePlayer;
+            UnitController.Instance.DamagePlayerStatic = YandexGame.savesData.DamagePlayer;
             MainUI.Instance.SetStat();
         }
     }

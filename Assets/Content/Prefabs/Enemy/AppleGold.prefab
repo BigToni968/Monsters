@@ -121,6 +121,8 @@ MonoBehaviour:
     Money: 25
   names:
   - "\u0417\u043E\u043B\u043E\u0442\u043E\u0435 \u044F\u0431\u043B\u043E\u043A\u043E"
+  - Golden Apple
+  - "Alt\u0131n elma"
   Animator: {fileID: 0}
   InfoUnit: {fileID: 3094110627785038601}
   CurrentHealth: 0

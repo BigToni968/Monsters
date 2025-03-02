@@ -16,6 +16,7 @@ namespace Assets.Content.Scripts.UI.Weak
         public float Price;
         public Image Image;
         public int IndexForSpawn;
+        public bool IsDress;
 
         public void OnSelectButton()
         {

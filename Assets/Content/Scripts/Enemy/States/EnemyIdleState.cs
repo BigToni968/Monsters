@@ -25,7 +25,6 @@ public class EnemyIdleState : State
 
     public override void OnStart()
     {
-        Debug.Log("State:Idle");
         _playerLayer = LayerMask.GetMask("Player");
         _coroutine = Controller.Enemy.StartCoroutine(Regeneration());
     }

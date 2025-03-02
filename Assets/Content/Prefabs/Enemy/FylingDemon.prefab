@@ -1266,6 +1266,8 @@ MonoBehaviour:
     Money: 35
   names:
   - "\u0414\u0435\u043C\u043E\u043D"
+  - Demon
+  - "\u015Eeytan"
   Animator: {fileID: 7727327306391821981}
   InfoUnit: {fileID: 1298614646264515528}
   CurrentHealth: 0
@@ -1273,6 +1275,9 @@ MonoBehaviour:
   IsActive: 0
   IsDeath: 0
   IsPassive: 0
+  IsBossMap1: 0
+  IsBossMap2: 0
+  IsBossMap3: 0
   Target: {fileID: 0}
 --- !u!1 &4707054121828949034
 GameObject:

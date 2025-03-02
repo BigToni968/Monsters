@@ -8,7 +8,7 @@ namespace Assets.Content.Scripts.Others
 {
     public class PortalTrigger : MonoBehaviour
     {
-        [SerializeField] private int _sceneindex;
+        [SerializeField] private int _sceneIndex;
         [SerializeField] private Transform _canvas;
 
         private void Update()
@@ -23,7 +23,7 @@ namespace Assets.Content.Scripts.Others
         {
             if (other.TryGetComponent<UnitController>(out UnitController controller))
             {
-                SceneManager.LoadScene(_sceneindex);
+                SceneManager.LoadScene(_sceneIndex);
             }
         }
     }

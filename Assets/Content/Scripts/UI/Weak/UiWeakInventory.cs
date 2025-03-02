@@ -15,6 +15,7 @@ namespace Assets.Content.Scripts.UI.Weak
 
         private int _useItem = 0;
 
+
         private void OnEnable()
         {
             for (int i = 0; i < _windowInventory.ItemsEquipment.Count; i++)

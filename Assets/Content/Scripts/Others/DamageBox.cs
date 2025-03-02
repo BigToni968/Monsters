@@ -13,27 +13,33 @@ namespace Assets.Content.Scripts.Others
         [SerializeField] private DamageNumber _damageNumber;
         private float _damage;
 
+        private bool _isTakeDamage;
         private void OnTriggerEnter(Collider other)
-        {    
+        {
             if (other.transform.parent != transform && other.TryGetComponent<IUnit>(out IUnit unit))
             {
+                _isTakeDamage = true;
                 EnemyUnit enemyUnit = unit as EnemyUnit;
                 PlayerUnit player = unit as PlayerUnit;
-             
-                if (enemyUnit != null)
+                
+                if (_isTakeDamage)
                 {
-                    if (enemyUnit.IsDeath) return;
-                    unit.TakeDamage(_damage, transform);
-                    _damageNumber.Spawn(new Vector3(enemyUnit.transform.position.x, _damageNumber.transform.position.y, enemyUnit.transform.position.z), -_damage);
-                    if (enemyUnit.CurrentHealth <= 0)
+                    _isTakeDamage = false;
+                    if (enemyUnit != null)
                     {
-                        MainUI.Instance.AddScore(enemyUnit.Model.Score, enemyUnit.Model.Money);
+                        if (enemyUnit.IsDeath) return;
+                        unit.TakeDamage(_damage, transform);
+                        _damageNumber.Spawn(new Vector3(enemyUnit.transform.position.x, _damageNumber.transform.position.y, enemyUnit.transform.position.z), -_damage);
+                        if (enemyUnit.CurrentHealth <= 0)
+                        {
+                            MainUI.Instance.AddScore(enemyUnit.Model.Score, enemyUnit.Model.Money);
+                        }
                     }
-                }
-                if (player != null)
-                {
-                    unit.TakeDamage(_damage);
-                    _damageNumber.Spawn(new Vector3(player.transform.position.x, _damageNumber.transform.position.y, player.transform.position.z), -_damage);
+                    if (player != null)
+                    {
+                        unit.TakeDamage(_damage);
+                        _damageNumber.Spawn(new Vector3(player.transform.position.x, _damageNumber.transform.position.y, player.transform.position.z), -_damage);
+                    }
                 }
             }
         }

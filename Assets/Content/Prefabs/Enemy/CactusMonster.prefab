@@ -113,6 +113,8 @@ MonoBehaviour:
     Money: 35
   names:
   - "\u0417\u043B\u043E\u0439 \u043A\u0430\u043A\u0442\u0443\u0441"
+  - Evil Cactus
+  - "K\xF6t\xFC kakt\xFCs"
   Animator: {fileID: 347179022620679155}
   InfoUnit: {fileID: 7042997768374534037}
   CurrentHealth: 0
@@ -120,6 +122,9 @@ MonoBehaviour:
   IsActive: 0
   IsDeath: 0
   IsPassive: 0
+  IsBossMap1: 0
+  IsBossMap2: 0
+  IsBossMap3: 0
   Target: {fileID: 0}
 --- !u!1 &2001016801980577857
 GameObject:

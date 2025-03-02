@@ -1241,6 +1241,8 @@ MonoBehaviour:
     Money: 35
   names:
   - "\u0418\u043D\u043E\u043F\u043B\u0430\u043D\u0435\u0442\u043D\u044B\u0439 \u0440\u044B\u0446\u0430\u0440\u044C"
+  - Alien Knight
+  - "Uzayl\u0131 \u015F\xF6valye"
   Animator: {fileID: 8402549946036181188}
   InfoUnit: {fileID: 4284542022112865132}
   CurrentHealth: 0
@@ -1248,6 +1250,9 @@ MonoBehaviour:
   IsActive: 0
   IsDeath: 0
   IsPassive: 0
+  IsBossMap1: 0
+  IsBossMap2: 0
+  IsBossMap3: 0
   Target: {fileID: 0}
 --- !u!1 &7964263186100888734
 GameObject:

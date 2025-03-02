@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 namespace Assets.Content.Scripts.UI
 {
-    public class WindowInfoUnit : MonoBehaviour
+    public class WindowInfoUnit : MonoUpdater
     {
         [SerializeField] private Transform _windowInfo;
         [SerializeField] private Transform _health;
@@ -15,10 +15,12 @@ namespace Assets.Content.Scripts.UI
         [SerializeField] private TextMeshProUGUI _healthText;
         [SerializeField] private Slider _healthSlider;
 
-
-        private void Update()
+        public override void OnTick()
         {
-            _windowInfo.LookAt(Camera.main.transform);
+            if (_windowInfo.gameObject.activeSelf)
+            {
+                _windowInfo.LookAt(Camera.main.transform);
+            }
         }
 
         public void SetName(string name)
@@ -42,7 +44,7 @@ namespace Assets.Content.Scripts.UI
         {
             _health.gameObject.SetActive(false);
         }
-        
+
         public void ShowCanvas()
         {
             _windowInfo.gameObject.SetActive(true);

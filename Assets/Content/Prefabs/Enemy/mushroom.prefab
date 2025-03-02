@@ -141,6 +141,8 @@ MonoBehaviour:
     Money: 5
   names:
   - "\u0413\u0440\u0438\u0431\u044B"
+  - Mushrooms
+  - Mantarlar
   Animator: {fileID: 0}
   InfoUnit: {fileID: 3749622472574520580}
   CurrentHealth: 0

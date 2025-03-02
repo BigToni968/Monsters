@@ -2,7 +2,7 @@
 
 namespace Assets.Content.Scripts.Statbuff
 {
-    public abstract class BaseStatbuff : MonoBehaviour
+    public abstract class BaseStatbuff : MonoUpdater
     {
         [SerializeField] protected float value;
 
@@ -15,7 +15,10 @@ namespace Assets.Content.Scripts.Statbuff
         {
             Deactivate();
         }
-
+        private void OnDestroy()
+        {
+            Deactivate();
+        }
         public void SetValue(float newValue)
         {
             value = newValue;

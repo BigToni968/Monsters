@@ -1524,6 +1524,8 @@ MonoBehaviour:
     Money: 35
   names:
   - "\u0421\u043C\u043E\u0442\u0440\u044F\u0449\u0438\u0439"
+  - Beholder
+  - Bakan
   Animator: {fileID: 5354180880986774091}
   InfoUnit: {fileID: 8905953188754802856}
   CurrentHealth: 0
@@ -1531,6 +1533,9 @@ MonoBehaviour:
   IsActive: 0
   IsDeath: 0
   IsPassive: 0
+  IsBossMap1: 0
+  IsBossMap2: 0
+  IsBossMap3: 0
   Target: {fileID: 0}
 --- !u!1 &8026772398604202246
 GameObject:

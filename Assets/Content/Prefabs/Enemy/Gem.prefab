@@ -141,6 +141,8 @@ MonoBehaviour:
     Money: 25
   names:
   - "\u041A\u0440\u0438\u0441\u0442\u0430\u043B"
+  - Crystal
+  - Kristal
   Animator: {fileID: 0}
   InfoUnit: {fileID: 4486698469919308361}
   CurrentHealth: 0
@@ -148,6 +150,9 @@ MonoBehaviour:
   IsActive: 0
   IsDeath: 0
   IsPassive: 1
+  IsBossMap1: 0
+  IsBossMap2: 0
+  IsBossMap3: 0
   Target: {fileID: 0}
 --- !u!1001 &7087898287725616091
 PrefabInstance:

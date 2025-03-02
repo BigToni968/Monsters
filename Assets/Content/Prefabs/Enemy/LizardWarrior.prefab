@@ -2210,6 +2210,8 @@ MonoBehaviour:
     Money: 35
   names:
   - "\u042F\u0449\u0435\u0440"
+  - Lizard
+  - Kertenkele
   Animator: {fileID: 8464462612417419503}
   InfoUnit: {fileID: 1226290520346359007}
   CurrentHealth: 0
@@ -2217,6 +2219,9 @@ MonoBehaviour:
   IsActive: 0
   IsDeath: 0
   IsPassive: 0
+  IsBossMap1: 0
+  IsBossMap2: 0
+  IsBossMap3: 0
   Target: {fileID: 0}
 --- !u!1 &7270938410692105240
 GameObject:

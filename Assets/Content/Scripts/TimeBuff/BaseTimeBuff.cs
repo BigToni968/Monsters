@@ -32,8 +32,7 @@ namespace Assets.Content.Scripts.TimeBuff
             Removed?.Invoke();
         }
 
-
-        private void Update()
+        public override void OnTick()
         {
             if (!_start)
                 return;
@@ -45,6 +44,7 @@ namespace Assets.Content.Scripts.TimeBuff
             if (_time <= 0f)
                 Destroy(this);
         }
+
         private void OnDestroy()
         {
             Removed = null;

@@ -1500,6 +1500,8 @@ MonoBehaviour:
     Money: 35
   names:
   - "\u0420\u044B\u0431\u0430 \u043C\u043E\u043D\u0441\u0442\u0440"
+  - Monster fish
+  - "Bal\u0131k canavar\u0131"
   Animator: {fileID: 328464356430798016}
   InfoUnit: {fileID: 4448158225571898176}
   CurrentHealth: 0
@@ -1507,6 +1509,9 @@ MonoBehaviour:
   IsActive: 0
   IsDeath: 0
   IsPassive: 0
+  IsBossMap1: 0
+  IsBossMap2: 0
+  IsBossMap3: 0
   Target: {fileID: 0}
 --- !u!1 &4468212756019965869
 GameObject:

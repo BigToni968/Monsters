@@ -8,17 +8,19 @@ namespace Assets.Content.Scripts.TimeBuff
 {
     public class DamageTimeBuff : BaseTimeBuff
     {
+        private float tempDamage;
         public override void Active()
         {
             base.Active();
-            UnitController.Instance.DamagePlayerBuff += UnitController.Instance.DamagePlayerStatic;
+            tempDamage = UnitController.Instance.DamagePlayerStatic + UnitController.Instance.DamagePlayerBuff;
+            UnitController.Instance.DamagePlayerBuff += tempDamage;
             MainUI.Instance.SetStat();
         }
 
         public override void Deactivate()
         {
             base.Deactivate();
-            UnitController.Instance.DamagePlayerBuff = 0;
+            UnitController.Instance.DamagePlayerBuff -= tempDamage;
             MainUI.Instance.SetStat();
         }
     }

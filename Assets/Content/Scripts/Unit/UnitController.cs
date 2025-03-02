@@ -19,6 +19,7 @@ namespace Assets.Content.Scripts.Unit
         public float RotationCameraSpeedMobile;
         public float MaxHealthPlayer;
         public float CurrentHealthPlayer;
+        public float HealthPlayerBuff;
         public float DamagePlayerStatic;
         public float DamagePlayerBuff;
         public bool IsMobile;

@@ -141,6 +141,8 @@ MonoBehaviour:
     Money: 25
   names:
   - "\u041F\u0435\u0440\u0435\u043A\u0430\u0442\u0438-\u043F\u043E\u043B\u0435"
+  - Tumbleweed
+  - Tumbleweed
   Animator: {fileID: 0}
   InfoUnit: {fileID: 1686466917855426816}
   CurrentHealth: 0
@@ -148,6 +150,9 @@ MonoBehaviour:
   IsActive: 0
   IsDeath: 0
   IsPassive: 1
+  IsBossMap1: 0
+  IsBossMap2: 0
+  IsBossMap3: 0
   Target: {fileID: 0}
 --- !u!1001 &1657690103501545239
 PrefabInstance:

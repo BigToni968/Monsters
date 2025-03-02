@@ -31,6 +31,7 @@ namespace Assets.Content.Scripts.UI
         [SerializeField] private WindowDailyReward _windowDailyReward;
         [SerializeField] private WindowInventory _windowInventory;
         [SerializeField] private WindowGift _windowGift;
+        [SerializeField] private WindowTeleport _windowTeleport;
         [SerializeField] private UINotification[] _uiNotifications;
         [SerializeField] private Transform _homePoint;
         [SerializeField] private Transform _unitController;
@@ -138,7 +139,11 @@ namespace Assets.Content.Scripts.UI
             _upgradeManager.Upgrade();
             SetTextLevel();
             Save();
-            OpenPortal.SetBarrier();
+            if (OpenPortal != null)
+            {
+                OpenPortal.SetBarrier();
+            }
+            _windowTeleport.CheckMapOpen();
         }
 
         public void SetTextLevel()
@@ -217,7 +222,7 @@ namespace Assets.Content.Scripts.UI
 
         public bool IsCanvasEnable()
         {
-            return _allCanvas[0].enabled || _allCanvas[1].enabled || _allCanvas[2].enabled || _allCanvas[3].enabled || _allCanvas[4].enabled || _allCanvas[5].enabled || _allCanvas[6].enabled;
+            return _allCanvas[0].enabled || _allCanvas[1].enabled || _allCanvas[2].enabled || _allCanvas[3].enabled || _allCanvas[4].enabled || _allCanvas[5].enabled || _allCanvas[6].enabled || _allCanvas[7].enabled;
         }
 
         public void ChangeMoney(float money)
@@ -244,7 +249,7 @@ namespace Assets.Content.Scripts.UI
         }
         public void SetStat()
         {
-            _healthMaxStat.SetText($"{new IdleCurrency(UnitController.Instance.MaxHealthPlayer).ToShortString()}");
+            _healthMaxStat.SetText($"{new IdleCurrency(UnitController.Instance.MaxHealthPlayer + UnitController.Instance.HealthPlayerBuff).ToShortString()}");
             _damageMaxStat.SetText($"{new IdleCurrency(UnitController.Instance.DamagePlayerStatic + UnitController.Instance.DamagePlayerBuff).ToShortString()}");
         }
     }

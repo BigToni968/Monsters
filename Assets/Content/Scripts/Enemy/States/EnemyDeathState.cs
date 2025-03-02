@@ -20,7 +20,6 @@ public class EnemyDeathState : State
 
     public override void OnStart()
     {
-        Debug.Log("State:Death");
         if (!Controller.Enemy.IsPassive)
         {
             Controller.Enemy.Animator.SetTrigger("IsDie");

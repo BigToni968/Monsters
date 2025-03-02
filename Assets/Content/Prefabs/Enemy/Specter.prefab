@@ -420,6 +420,8 @@ MonoBehaviour:
     Money: 35
   names:
   - "\u041F\u0440\u0438\u0437\u0440\u0430\u043A"
+  - Ghost
+  - Hayalet
   Animator: {fileID: 3892847529286679984}
   InfoUnit: {fileID: 1596006375308921786}
   CurrentHealth: 0
@@ -427,6 +429,9 @@ MonoBehaviour:
   IsActive: 0
   IsDeath: 0
   IsPassive: 0
+  IsBossMap1: 0
+  IsBossMap2: 0
+  IsBossMap3: 0
   Target: {fileID: 0}
 --- !u!1 &1103789173463851954
 GameObject:

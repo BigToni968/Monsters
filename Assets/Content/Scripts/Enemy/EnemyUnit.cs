@@ -11,7 +11,7 @@ using Random = UnityEngine.Random;
 
 namespace Assets.Content.Scripts.Enemy
 {
-    public class EnemyUnit : MonoBehaviour, IUnit
+    public class EnemyUnit : MonoUpdater, IUnit
     {
         [SerializeField] private EnemyController _controller;
         [SerializeField] private DamageBox _damageBox;
@@ -45,11 +45,11 @@ namespace Assets.Content.Scripts.Enemy
             }
             else if (YandexGame.EnvironmentData.language == "en")
             {
-                //InfoUnit.SetName(names[1]);
+                InfoUnit.SetName(names[1]);
             }
             else if (YandexGame.EnvironmentData.language == "tr")
             {
-                //InfoUnit.SetName(names[2]);
+                InfoUnit.SetName(names[2]);
             }
             SetOptions();
             _controller = new EnemyController(this);
@@ -64,8 +64,7 @@ namespace Assets.Content.Scripts.Enemy
                 _originalMaterials = _skinnedMeshRenderer.materials;
             }
         }
-
-        public void Tick()
+        public override void OnTick()
         {
             _controller?.OnUpdate();
             InfoUnit.SetHealth(CurrentHealth, MaxHealth);

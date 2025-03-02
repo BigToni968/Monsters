@@ -140,6 +140,8 @@ MonoBehaviour:
     Money: 35
   names:
   - "\u0417\u043B\u0430\u044F \u0442\u044B\u043A\u0432\u0430"
+  - "K\u0131zg\u0131n kabak"
+  - Evil Pumpkin
   Animator: {fileID: 0}
   InfoUnit: {fileID: 4871645286998168707}
   CurrentHealth: 0

@@ -35,7 +35,6 @@ public class EnemyAttackState : State
 
     public override void OnStart()
     {
-        Debug.Log("State:Attack");
         _playerLayer = LayerMask.GetMask("Player");
         if (!Controller.Enemy.IsPassive)
         {

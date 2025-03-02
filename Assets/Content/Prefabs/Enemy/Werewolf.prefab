@@ -240,6 +240,8 @@ MonoBehaviour:
     Money: 75
   names:
   - "\u0417\u0443\u0431\u0430\u0441\u0442\u044B\u0439 \u0432\u043E\u043B\u043A"
+  - Toothy Wolf
+  - "Di\u015Flek kurt"
   Animator: {fileID: 3910649537280951695}
   InfoUnit: {fileID: 5413913884073348116}
   CurrentHealth: 0

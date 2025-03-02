@@ -121,6 +121,8 @@ MonoBehaviour:
     Money: 10
   names:
   - "\u042F\u0431\u043B\u043E\u043A\u043E"
+  - Apple
+  - Elma
   Animator: {fileID: 0}
   InfoUnit: {fileID: 1737645408349052833}
   CurrentHealth: 0

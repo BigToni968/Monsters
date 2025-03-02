@@ -1180,6 +1180,8 @@ MonoBehaviour:
     Money: 100
   names:
   - "\u041A\u0440\u0430\u0431"
+  - Crab
+  - "Yenge\xE7"
   Animator: {fileID: 7423102397576765544}
   InfoUnit: {fileID: 5829581592599861007}
   CurrentHealth: 0

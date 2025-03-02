@@ -718,6 +718,8 @@ MonoBehaviour:
     Money: 40
   names:
   - "\u041A\u0440\u044B\u0441\u0430"
+  - Rat
+  - "S\u0131\xE7an"
   Animator: {fileID: 3959008521547160349}
   InfoUnit: {fileID: 335788688645972856}
   CurrentHealth: 0

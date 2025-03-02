@@ -1225,6 +1225,8 @@ MonoBehaviour:
     Money: 35
   names:
   - "\u0426\u0438\u043A\u043B\u043E\u043F"
+  - Cyclops
+  - "Tepeg\xF6z"
   Animator: {fileID: 5487394679255799625}
   InfoUnit: {fileID: 8840978062203667589}
   CurrentHealth: 0
@@ -1232,6 +1234,9 @@ MonoBehaviour:
   IsActive: 0
   IsDeath: 0
   IsPassive: 0
+  IsBossMap1: 0
+  IsBossMap2: 0
+  IsBossMap3: 0
   Target: {fileID: 0}
 --- !u!1 &7924398591375433062
 GameObject:

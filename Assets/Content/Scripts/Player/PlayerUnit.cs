@@ -70,7 +70,7 @@ namespace Assets.Content.Scripts.Player
             }
             UnitController.Instance.IsTakeDamage = true;
             UnitController.Instance.CurrentHealthPlayer -= damage;
-            UnitController.Instance.CurrentHealthPlayer = Mathf.Clamp(UnitController.Instance.CurrentHealthPlayer, 0, UnitController.Instance.MaxHealthPlayer);
+            UnitController.Instance.CurrentHealthPlayer = Mathf.Clamp(UnitController.Instance.CurrentHealthPlayer, 0, UnitController.Instance.MaxHealthPlayer + UnitController.Instance.HealthPlayerBuff);
             UnitController.Instance.InfoUnit.ShowHealth();
             if (UnitController.Instance.CurrentHealthPlayer <= 0)
             {
@@ -80,7 +80,7 @@ namespace Assets.Content.Scripts.Player
 
         private void Death()
         {
-            UnitController.Instance.CurrentHealthPlayer = UnitController.Instance.MaxHealthPlayer;
+            UnitController.Instance.CurrentHealthPlayer = UnitController.Instance.MaxHealthPlayer + UnitController.Instance.HealthPlayerBuff;
             _unit.position = _spawnPoint.position;
         }
 
@@ -101,10 +101,10 @@ namespace Assets.Content.Scripts.Player
                     if (!UnitController.Instance.IsTakeDamage)
                     {
                         UnitController.Instance.CurrentHealthPlayer += Model.Regeneration;
-                        UnitController.Instance.CurrentHealthPlayer = Mathf.Clamp(UnitController.Instance.CurrentHealthPlayer, 0, UnitController.Instance.MaxHealthPlayer);
+                        UnitController.Instance.CurrentHealthPlayer = Mathf.Clamp(UnitController.Instance.CurrentHealthPlayer, 0, UnitController.Instance.MaxHealthPlayer + UnitController.Instance.HealthPlayerBuff);
                     }
                 }
-                if (UnitController.Instance.CurrentHealthPlayer >= UnitController.Instance.MaxHealthPlayer)
+                if (UnitController.Instance.CurrentHealthPlayer >= UnitController.Instance.MaxHealthPlayer + UnitController.Instance.HealthPlayerBuff)
                 {
                     UnitController.Instance.InfoUnit.HideHealth();
                 }
@@ -114,7 +114,7 @@ namespace Assets.Content.Scripts.Player
 
         private void SetRelax()
         {
-            if (UnitController.Instance.CurrentHealthPlayer < UnitController.Instance.MaxHealthPlayer)
+            if (UnitController.Instance.CurrentHealthPlayer < UnitController.Instance.MaxHealthPlayer + UnitController.Instance.HealthPlayerBuff)
             {
                 if (_coroutineRelax == null)
                 {
