@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class MonoUpdater : MonoBehaviour
 {
-    public static List<MonoUpdater> AllUpdate = new List<MonoUpdater>(500);
+    public static List<MonoUpdater> AllUpdate = new List<MonoUpdater>(100);
 
     private void OnEnable() => AllUpdate.Add(this);
     private void OnDisable() => AllUpdate.Remove(this);

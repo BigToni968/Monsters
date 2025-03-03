@@ -8,6 +8,7 @@ namespace Assets.Content.Scripts.Statbuff
 
         private void OnEnable()
         {
+            
             //Active();
         }
 
@@ -24,7 +25,13 @@ namespace Assets.Content.Scripts.Statbuff
             value = newValue;
         }
 
-        public virtual void Active() { }
-        public virtual void Deactivate() { }
+        public virtual void Active() 
+        {
+            AllUpdate.Add(this);
+        }
+        public virtual void Deactivate() 
+        {
+            AllUpdate.Remove(this);
+        }
     }
 }

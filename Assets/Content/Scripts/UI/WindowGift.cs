@@ -1,3 +1,4 @@
+using Assets.Content.Scripts.Others;
 using Assets.Content.Scripts.UI.Weak;
 using System;
 using System.Collections;
@@ -16,7 +17,7 @@ namespace Assets.Content.Scripts.UI
         public Sprite Icon;
         public float Duration;
     }
-    
+
     public class WindowGift : MonoBehaviour
     {
         [SerializeField] private Transform _content;
@@ -50,8 +51,9 @@ namespace Assets.Content.Scripts.UI
                 temp.Init(Gifts[i], i);
                 _ui_GiftsSelected.Add(temp);
                 temp.ButtonText.text = $"выбрать";
-                StartCoroutine(Timer(Gifts[i].Duration, temp.Background, temp.ButtonText, temp.Back, temp.ColorReady));
+                StartCoroutine(Timer(Gifts[i].Duration, temp.Background, temp.ButtonText, temp.Back, temp.ColorReady, i));
             }
+            GiftsTimer.IsStart = true;
         }
 
         public void Show()
@@ -140,12 +142,16 @@ namespace Assets.Content.Scripts.UI
             OnUpdate?.Invoke();
         }
 
-        private IEnumerator Timer(float time, Button button, TextMeshProUGUI textButton, Image tempBack, Color tempColorReady)
+        private IEnumerator Timer(float time, Button button, TextMeshProUGUI textButton, Image tempBack, Color tempColorReady, int index)
         {
-            while (time > 0)
+            if (!GiftsTimer.IsStart)
             {
-                time -= 1;
-                textButton.SetText(Convert((int)time));
+                GiftsTimer.Times.Add(time);
+            }
+            while (GiftsTimer.Times[index] > 0)
+            {
+                GiftsTimer.Times[index] -= 1;
+                textButton.SetText(Convert((int)GiftsTimer.Times[index]));
                 yield return new WaitForSeconds(1f);
             }
 

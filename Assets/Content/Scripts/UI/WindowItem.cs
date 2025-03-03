@@ -71,7 +71,10 @@ namespace Assets.Content.Scripts.UI
                 YandexGame.savesData.Items.Remove(item.Index);
                 YandexGame.SaveProgress();
             }
-            Destroy(item.gameObject);
+            if (item != null)
+            {
+                Destroy(item.gameObject);
+            }
         }
         public void Selected(Items item)
         {
@@ -99,8 +102,12 @@ namespace Assets.Content.Scripts.UI
                     _goldTimeBuff.OnTime += x => MainUI.Instance.SliderGoldBuff.value = x;
                     _goldTimeBuff.Removed += () =>
                     {
-                        MainUI.Instance.SliderGoldBuff.value = MainUI.Instance.SliderGoldBuff.maxValue;
-                        MainUI.Instance.SliderGoldBuff.gameObject.SetActive(false);
+                        if (MainUI.Instance.SliderGoldBuff != null)
+                        {
+                            MainUI.Instance.SliderGoldBuff.value = MainUI.Instance.SliderGoldBuff.maxValue;
+                            MainUI.Instance.SliderGoldBuff.gameObject.SetActive(false);
+                        }
+
                         _itemsUseList.Remove(TypeItems.Gold);
                     };
                     _itemsUseList.Add(_item._typeItems);
@@ -122,8 +129,12 @@ namespace Assets.Content.Scripts.UI
                     _expTimeBuff.OnTime += x => MainUI.Instance.SliderExpBuff.value = x;
                     _expTimeBuff.Removed += () =>
                     {
-                        MainUI.Instance.SliderExpBuff.value = MainUI.Instance.SliderExpBuff.maxValue;
-                        MainUI.Instance.SliderExpBuff.gameObject.SetActive(false);
+                        if (MainUI.Instance.SliderExpBuff != null)
+                        {
+                            MainUI.Instance.SliderExpBuff.value = MainUI.Instance.SliderExpBuff.maxValue;
+                            MainUI.Instance.SliderExpBuff.gameObject.SetActive(false);
+                        }
+
                         _itemsUseList.Remove(TypeItems.Exp);
                     };
                     _itemsUseList.Add(_item._typeItems);
@@ -145,8 +156,11 @@ namespace Assets.Content.Scripts.UI
                     _damageTimeBuff.OnTime += x => MainUI.Instance.SliderDamageBuff.value = x;
                     _damageTimeBuff.Removed += () =>
                     {
-                        MainUI.Instance.SliderDamageBuff.value = MainUI.Instance.SliderDamageBuff.maxValue;
-                        MainUI.Instance.SliderDamageBuff.gameObject.SetActive(false);
+                        if (MainUI.Instance.SliderDamageBuff != null)
+                        {
+                            MainUI.Instance.SliderDamageBuff.value = MainUI.Instance.SliderDamageBuff.maxValue;
+                            MainUI.Instance.SliderDamageBuff.gameObject.SetActive(false);
+                        }
                         _itemsUseList.Remove(TypeItems.Damage);
                     };
                     _itemsUseList.Add(_item._typeItems);
@@ -173,9 +187,9 @@ namespace Assets.Content.Scripts.UI
                 {
                     _expTimeBuff.Removed += () =>
                     {
-                    MainUI.Instance.SliderExpBuff.value = MainUI.Instance.SliderExpBuff.maxValue;
-                    MainUI.Instance.SliderExpBuff.gameObject.SetActive(false);
-                    _itemsUseList.Remove(TypeItems.Exp);
+                        MainUI.Instance.SliderExpBuff.value = MainUI.Instance.SliderExpBuff.maxValue;
+                        MainUI.Instance.SliderExpBuff.gameObject.SetActive(false);
+                        _itemsUseList.Remove(TypeItems.Exp);
                     };
                     Destroy(_expTimeBuff);
                 }

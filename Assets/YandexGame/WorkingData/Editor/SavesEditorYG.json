@@ -1,5 +1,5 @@
 {
-    "idSave": 22,
+    "idSave": 100,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -11,7 +11,7 @@
         false
     ],
     "RewardData": {
-        "LastTime": "01.03.2025 0:00:00",
+        "LastTime": "02.03.2025 0:00:00",
         "AllRewards": 7,
         "TakeCount": 0,
         "NotakeCount": 1,
@@ -32,10 +32,10 @@
     "Items": [],
     "Money": 0.0,
     "Score": 0.0,
-    "NeedScore": 150.0,
+    "NeedScore": 0.0,
     "CurrentScore": 0.0,
-    "CurrentLevel": 1,
-    "NeedLevel": 2,
+    "CurrentLevel": 0,
+    "NeedLevel": 1,
     "CurrentIdPlayer": 0,
     "MaxHealthPlayer": 10.0,
     "CurrentHealthPlayer": 10.0,

@@ -1,6 +1,8 @@
 ﻿using Assets.Content.Scripts.Statbuff;
 using UnityEngine;
 using System;
+using Assets.Content.Scripts.UI;
+using System.Collections.Generic;
 
 namespace Assets.Content.Scripts.TimeBuff
 {
