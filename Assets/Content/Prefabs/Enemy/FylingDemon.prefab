@@ -1253,16 +1253,16 @@ MonoBehaviour:
   _highlightMaterial: {fileID: 2100000, guid: 366774be727a5f845b1f353b74b4e5e1, type: 2}
   _hitEffects: {fileID: 664989928394714156}
   Model:
-    Health: 150
-    Damage: 30
-    Regeneration: 10
+    Health: 6371
+    Damage: 1142
+    Regeneration: 200
     DelayRegeneration: 1
     RadiusFindPlayer: 22
     DelayAttack: 1.1
     SpeedRotation: 7
-    TimeForAttack: 25
+    TimeForAttack: 80
     DelayDeath: 5
-    Score: 55
+    Score: 23291
     Money: 35
   names:
   - "\u0414\u0435\u043C\u043E\u043D"

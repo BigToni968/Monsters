@@ -1389,17 +1389,17 @@ MonoBehaviour:
   _highlightMaterial: {fileID: 2100000, guid: 366774be727a5f845b1f353b74b4e5e1, type: 2}
   _hitEffects: {fileID: 7396597761175958710}
   Model:
-    Health: 700
+    Health: 525
     Damage: 50
-    Regeneration: 25
+    Regeneration: 35
     DelayRegeneration: 1
-    RadiusFindPlayer: 6
+    RadiusFindPlayer: 7
     DelayAttack: 1
     SpeedRotation: 7
     TimeForAttack: 25
     DelayDeath: 5
-    Score: 140
-    Money: 60
+    Score: 675
+    Money: 160
   names:
   - "\u042F\u0434\u043E\u0432\u0438\u0442\u043E\u0435 \u0440\u0430\u0441\u0442\u0435\u043D\u0438\u0435"
   - Poisonous plant

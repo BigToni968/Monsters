@@ -128,7 +128,7 @@ MonoBehaviour:
   _highlightMaterial: {fileID: 2100000, guid: 366774be727a5f845b1f353b74b4e5e1, type: 2}
   _hitEffects: {fileID: 4250603707018796586}
   Model:
-    Health: 100
+    Health: 2293
     Damage: 0
     Regeneration: 10
     DelayRegeneration: 1
@@ -137,8 +137,8 @@ MonoBehaviour:
     SpeedRotation: 0
     TimeForAttack: 0
     DelayDeath: 5
-    Score: 40
-    Money: 25
+    Score: 38430
+    Money: 740
   names:
   - "\u0427\u0443\u0436\u043E\u0435 \u0440\u0430\u0441\u0442\u0435\u043D\u0438\u0435"
   - Foreign plant

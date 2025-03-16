@@ -2197,17 +2197,17 @@ MonoBehaviour:
   _highlightMaterial: {fileID: 2100000, guid: 366774be727a5f845b1f353b74b4e5e1, type: 2}
   _hitEffects: {fileID: 8702220571783072956}
   Model:
-    Health: 150
-    Damage: 30
-    Regeneration: 10
+    Health: 1980
+    Damage: 347
+    Regeneration: 75
     DelayRegeneration: 1
     RadiusFindPlayer: 7
     DelayAttack: 1.1
     SpeedRotation: 7
-    TimeForAttack: 25
+    TimeForAttack: 60
     DelayDeath: 5
-    Score: 55
-    Money: 35
+    Score: 11232
+    Money: 580
   names:
   - "\u042F\u0449\u0435\u0440"
   - Lizard

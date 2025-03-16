@@ -29,7 +29,9 @@ namespace Assets.Content.Scripts.Others
                     {
                         if (enemyUnit.IsDeath) return;
                         unit.TakeDamage(_damage, transform);
-                        _damageNumber.Spawn(new Vector3(enemyUnit.transform.position.x, _damageNumber.transform.position.y, enemyUnit.transform.position.z), -_damage);
+                        _damageNumber.Spawn(new Vector3(enemyUnit.transform.position.x, _damageNumber.transform.position.y * 2f, enemyUnit.transform.position.z), -_damage);
+                        float randomScale = Random.Range(2f, 5f);
+                        _damageNumber.transform.localScale = new Vector3(randomScale, randomScale, randomScale);
                         if (enemyUnit.CurrentHealth <= 0)
                         {
                             MainUI.Instance.AddScore(enemyUnit.Model.Score, enemyUnit.Model.Money);
@@ -38,7 +40,9 @@ namespace Assets.Content.Scripts.Others
                     if (player != null)
                     {
                         unit.TakeDamage(_damage);
-                        _damageNumber.Spawn(new Vector3(player.transform.position.x, _damageNumber.transform.position.y, player.transform.position.z), -_damage);
+                        _damageNumber.Spawn(new Vector3(player.transform.position.x, _damageNumber.transform.position.y * 2f, player.transform.position.z), -_damage);
+                        float randomScale = Random.Range(2f, 5f);
+                        _damageNumber.transform.localScale = new Vector3(randomScale, randomScale, randomScale);
                     }
                 }
             }

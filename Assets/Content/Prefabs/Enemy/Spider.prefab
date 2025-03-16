@@ -1240,17 +1240,17 @@ MonoBehaviour:
   _highlightMaterial: {fileID: 2100000, guid: 366774be727a5f845b1f353b74b4e5e1, type: 2}
   _hitEffects: {fileID: 7144796566752625362}
   Model:
-    Health: 150
-    Damage: 30
-    Regeneration: 10
+    Health: 6605
+    Damage: 745
+    Regeneration: 250
     DelayRegeneration: 1
     RadiusFindPlayer: 8
     DelayAttack: 1.1
     SpeedRotation: 7
-    TimeForAttack: 25
+    TimeForAttack: 150
     DelayDeath: 5
-    Score: 55
-    Money: 35
+    Score: 83008
+    Money: 860
   names:
   - "\u041F\u0430\u0443\u043A"
   - Spider

@@ -108,7 +108,7 @@ MonoBehaviour:
   _highlightMaterial: {fileID: 2100000, guid: 366774be727a5f845b1f353b74b4e5e1, type: 2}
   _hitEffects: {fileID: 5773750483233573118}
   Model:
-    Health: 100
+    Health: 108
     Damage: 0
     Regeneration: 10
     DelayRegeneration: 1
@@ -117,8 +117,8 @@ MonoBehaviour:
     SpeedRotation: 0
     TimeForAttack: 0
     DelayDeath: 5
-    Score: 40
-    Money: 25
+    Score: 56
+    Money: 50
   names:
   - "\u0417\u043E\u043B\u043E\u0442\u043E\u0435 \u044F\u0431\u043B\u043E\u043A\u043E"
   - Golden Apple

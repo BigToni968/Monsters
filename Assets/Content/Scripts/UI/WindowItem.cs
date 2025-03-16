@@ -33,6 +33,81 @@ namespace Assets.Content.Scripts.UI
         {
             Load();
             originalScale = _textUsedItem.transform.localScale;
+            foreach (var item in TimerBuff.ItemsTime)
+            {
+                switch (item.Key)
+                {
+                    case TypeItems.Gold:
+                        _goldTimeBuff = UnitController.Instance.gameObject.AddComponent<GoldTimeBuff>();
+                        _goldTimeBuff.SetValue(1);
+                        _goldTimeBuff.Duration = item.Value;
+                        _goldTimeBuff.Type = TypeItems.Gold;
+                        MainUI.Instance.SliderGoldBuff.value = MainUI.Instance.SliderGoldBuff.maxValue = item.Value;
+                        _goldTimeBuff.OnTime += x => MainUI.Instance.SliderGoldBuff.value = x;
+                        _goldTimeBuff.Removed += () =>
+                        {
+                            if (MainUI.Instance.SliderGoldBuff != null)
+                            {
+                                MainUI.Instance.SliderGoldBuff.value = MainUI.Instance.SliderGoldBuff.maxValue;
+                                MainUI.Instance.SliderGoldBuff.gameObject.SetActive(false);
+                            }
+
+                            _itemsUseList.Remove(TypeItems.Gold);
+                        };
+                        _itemsUseList.Add(TypeItems.Gold);
+                        _goldTimeBuff.Play();
+                        MainUI.Instance.SliderGoldBuff.gameObject.SetActive(true);
+                        _isAds = false;
+                        _item = null;
+                        break;
+                    case TypeItems.Exp:
+                        _expTimeBuff = UnitController.Instance.gameObject.AddComponent<ExpTimeBuff>();
+                        _expTimeBuff.SetValue(1);
+                        _expTimeBuff.Duration = item.Value;
+                        _expTimeBuff.Type = TypeItems.Exp;
+                        MainUI.Instance.SliderExpBuff.value = MainUI.Instance.SliderExpBuff.maxValue = item.Value;
+                        _expTimeBuff.OnTime += x => MainUI.Instance.SliderExpBuff.value = x;
+                        _expTimeBuff.Removed += () =>
+                        {
+                            if (MainUI.Instance.SliderExpBuff != null)
+                            {
+                                MainUI.Instance.SliderExpBuff.value = MainUI.Instance.SliderExpBuff.maxValue;
+                                MainUI.Instance.SliderExpBuff.gameObject.SetActive(false);
+                            }
+
+                            _itemsUseList.Remove(TypeItems.Exp);
+                        };
+                        _itemsUseList.Add(TypeItems.Exp);
+                        _expTimeBuff.Play();
+                        MainUI.Instance.SliderExpBuff.gameObject.SetActive(true);
+                        _isAds = false;
+                        _item = null;
+                        break;
+                    case TypeItems.Damage:
+                        _damageTimeBuff = UnitController.Instance.gameObject.AddComponent<DamageTimeBuff>();
+                        _damageTimeBuff.SetValue(1);
+                        _damageTimeBuff.Duration = item.Value;
+                        _damageTimeBuff.Type = TypeItems.Damage;
+                        MainUI.Instance.SliderDamageBuff.value = MainUI.Instance.SliderDamageBuff.maxValue = item.Value;
+                        _damageTimeBuff.OnTime += x => MainUI.Instance.SliderDamageBuff.value = x;
+                        _damageTimeBuff.Removed += () =>
+                        {
+                            if (MainUI.Instance.SliderDamageBuff != null)
+                            {
+                                MainUI.Instance.SliderDamageBuff.value = MainUI.Instance.SliderDamageBuff.maxValue;
+                                MainUI.Instance.SliderDamageBuff.gameObject.SetActive(false);
+                            }
+                            _itemsUseList.Remove(TypeItems.Damage);
+                        };
+                        _itemsUseList.Add(TypeItems.Damage);
+                        _damageTimeBuff.Play();
+                        MainUI.Instance.SliderDamageBuff.gameObject.SetActive(true);
+                        _isAds = false;
+                        _item = null;
+                        break;
+                }                
+            }
+            TimerBuff.ItemsTime.Clear();
         }
 
         private void Save(int index)
@@ -98,6 +173,7 @@ namespace Assets.Content.Scripts.UI
                     _goldTimeBuff = UnitController.Instance.gameObject.AddComponent<GoldTimeBuff>();
                     _goldTimeBuff.SetValue(_item.Value);
                     _goldTimeBuff.Duration = _item.Time;
+                    _goldTimeBuff.Type = _item._typeItems;
                     MainUI.Instance.SliderGoldBuff.value = MainUI.Instance.SliderGoldBuff.maxValue = _item.Time;
                     _goldTimeBuff.OnTime += x => MainUI.Instance.SliderGoldBuff.value = x;
                     _goldTimeBuff.Removed += () =>
@@ -125,11 +201,12 @@ namespace Assets.Content.Scripts.UI
                     _expTimeBuff = UnitController.Instance.gameObject.AddComponent<ExpTimeBuff>();
                     _expTimeBuff.SetValue(_item.Value);
                     _expTimeBuff.Duration = _item.Time;
+                    _expTimeBuff.Type = _item._typeItems;
                     MainUI.Instance.SliderExpBuff.value = MainUI.Instance.SliderExpBuff.maxValue = _item.Time;
                     _expTimeBuff.OnTime += x => MainUI.Instance.SliderExpBuff.value = x;
                     _expTimeBuff.Removed += () =>
                     {
-                        if (MainUI.Instance.SliderExpBuff != null)
+                        if (MainUI.Instance != null)
                         {
                             MainUI.Instance.SliderExpBuff.value = MainUI.Instance.SliderExpBuff.maxValue;
                             MainUI.Instance.SliderExpBuff.gameObject.SetActive(false);
@@ -152,11 +229,12 @@ namespace Assets.Content.Scripts.UI
                     _damageTimeBuff = UnitController.Instance.gameObject.AddComponent<DamageTimeBuff>();
                     _damageTimeBuff.SetValue(_item.Value);
                     _damageTimeBuff.Duration = _item.Time;
+                    _damageTimeBuff.Type = _item._typeItems;
                     MainUI.Instance.SliderDamageBuff.value = MainUI.Instance.SliderDamageBuff.maxValue = _item.Time;
                     _damageTimeBuff.OnTime += x => MainUI.Instance.SliderDamageBuff.value = x;
                     _damageTimeBuff.Removed += () =>
                     {
-                        if (MainUI.Instance.SliderDamageBuff != null)
+                        if (MainUI.Instance != null)
                         {
                             MainUI.Instance.SliderDamageBuff.value = MainUI.Instance.SliderDamageBuff.maxValue;
                             MainUI.Instance.SliderDamageBuff.gameObject.SetActive(false);
@@ -184,7 +262,7 @@ namespace Assets.Content.Scripts.UI
             if (index == 0)
             {
                 if (_expTimeBuff != null)
-                {
+                {                   
                     _expTimeBuff.Removed += () =>
                     {
                         MainUI.Instance.SliderExpBuff.value = MainUI.Instance.SliderExpBuff.maxValue;

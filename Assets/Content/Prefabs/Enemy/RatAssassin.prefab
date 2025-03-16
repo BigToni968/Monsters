@@ -705,17 +705,17 @@ MonoBehaviour:
   _highlightMaterial: {fileID: 2100000, guid: 366774be727a5f845b1f353b74b4e5e1, type: 2}
   _hitEffects: {fileID: 2891072218798067767}
   Model:
-    Health: 200
+    Health: 463
     Damage: 35
     Regeneration: 15
     DelayRegeneration: 1
-    RadiusFindPlayer: 6
+    RadiusFindPlayer: 7
     DelayAttack: 1.1
     SpeedRotation: 7
     TimeForAttack: 25
     DelayDeath: 5
-    Score: 70
-    Money: 40
+    Score: 338
+    Money: 80
   names:
   - "\u041A\u0440\u044B\u0441\u0430"
   - Rat

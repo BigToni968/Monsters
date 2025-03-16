@@ -21,19 +21,25 @@ namespace Assets.Content.Scripts.Others
         private void Load()
         {
             YandexGame.LoadProgress();
-            if (MainUI.Instance.CurrentLevel >= _levelMap && YandexGame.savesData.IsBossDeathMap1 || YandexGame.savesData.IsBossDeathMap2 || YandexGame.savesData.IsBossDeathMap3)
+            if (MainUI.Instance.CurrentLevel >= _levelMap)
             {
-                _stopBarrier.gameObject.SetActive(false);
-                _canvas.gameObject.SetActive(false);
+                if(YandexGame.savesData.IsBossDeathMap1 || YandexGame.savesData.IsBossDeathMap2 || YandexGame.savesData.IsBossDeathMap3)
+                {
+                    _stopBarrier.gameObject.SetActive(false);
+                    _canvas.gameObject.SetActive(false);
+                }              
             }
         }
 
         public void SetBarrier()
         {
-            if (MainUI.Instance.CurrentLevel >= _levelMap && YandexGame.savesData.IsBossDeathMap1 || YandexGame.savesData.IsBossDeathMap2 || YandexGame.savesData.IsBossDeathMap3)
+            if (MainUI.Instance.CurrentLevel >= _levelMap)
             {
-                _stopBarrier.gameObject.SetActive(false);
-                _canvas.gameObject.SetActive(false);
+                if (YandexGame.savesData.IsBossDeathMap1 || YandexGame.savesData.IsBossDeathMap2 || YandexGame.savesData.IsBossDeathMap3)
+                {
+                    _stopBarrier.gameObject.SetActive(false);
+                    _canvas.gameObject.SetActive(false);
+                }
             }
         }
     }

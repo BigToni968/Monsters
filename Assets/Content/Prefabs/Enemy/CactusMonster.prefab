@@ -100,17 +100,17 @@ MonoBehaviour:
   _highlightMaterial: {fileID: 2100000, guid: 366774be727a5f845b1f353b74b4e5e1, type: 2}
   _hitEffects: {fileID: 4814209465733872392}
   Model:
-    Health: 150
-    Damage: 30
+    Health: 3267
+    Damage: 586
     Regeneration: 10
     DelayRegeneration: 1
     RadiusFindPlayer: 7
     DelayAttack: 1.1
     SpeedRotation: 7
-    TimeForAttack: 25
+    TimeForAttack: 60
     DelayDeath: 5
-    Score: 55
-    Money: 35
+    Score: 16174
+    Money: 620
   names:
   - "\u0417\u043B\u043E\u0439 \u043A\u0430\u043A\u0442\u0443\u0441"
   - Evil Cactus

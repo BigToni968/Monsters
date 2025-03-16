@@ -10,6 +10,7 @@ namespace Assets.Content.Scripts.TimeBuff
     {
         public float Duration;
         private float _time;
+        public TypeItems Type;
 
         public event Action<float> OnTime;
         public event Action Removed;
@@ -50,6 +51,11 @@ namespace Assets.Content.Scripts.TimeBuff
         private void OnDestroy()
         {
             Removed = null;
+        }
+
+        public float GetTime()
+        {
+            return _time;
         }
     }
 }

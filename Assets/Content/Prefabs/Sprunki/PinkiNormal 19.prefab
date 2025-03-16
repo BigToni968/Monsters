@@ -84,23 +84,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7079867656563410552}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8462fc1f71074e4c8ed96c05e3f8d6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 390366711078474791}
   _damageBox: {fileID: 0}
   _spawnPoint: {fileID: 0}
-  _delayRelax: 0
+  _delayRelax: 5
   _index: 0
   _unit: {fileID: 0}
+  _meshRenderer: {fileID: 2422728137690830054}
+  _boxCollider: {fileID: 1746821321258962871}
+  Animator: {fileID: 390366711078474791}
   Model:
-    Health: 200
-    Damage: 50
-    Regeneration: 0
+    Health: 125
+    Damage: 90
+    Regeneration: 250
   _autoAttack: 0
-  _health: 0
+  Sprite: {fileID: 21300000, guid: 947ebd01d95e8614dbe699e32ff25b3a, type: 3}
 --- !u!1 &7822570359140988378
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,6 +192,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8b3d3d69be9a504c81ec2527cec650f, type: 3}
+--- !u!23 &2422728137690830054 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5313388894425353902, guid: d8b3d3d69be9a504c81ec2527cec650f, type: 3}
+  m_PrefabInstance: {fileID: 7504036481407474248}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2630204707865394339 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5522517417453758187, guid: d8b3d3d69be9a504c81ec2527cec650f, type: 3}

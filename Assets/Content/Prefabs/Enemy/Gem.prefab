@@ -128,17 +128,17 @@ MonoBehaviour:
   _highlightMaterial: {fileID: 2100000, guid: 366774be727a5f845b1f353b74b4e5e1, type: 2}
   _hitEffects: {fileID: 1348233055501196710}
   Model:
-    Health: 100
+    Health: 3822
     Damage: 0
-    Regeneration: 10
+    Regeneration: 150
     DelayRegeneration: 1
-    RadiusFindPlayer: 6
+    RadiusFindPlayer: 8
     DelayAttack: 0
     SpeedRotation: 0
-    TimeForAttack: 0
+    TimeForAttack: 150
     DelayDeath: 5
-    Score: 40
-    Money: 25
+    Score: 25620
+    Money: 740
   names:
   - "\u041A\u0440\u0438\u0441\u0442\u0430\u043B"
   - Crystal

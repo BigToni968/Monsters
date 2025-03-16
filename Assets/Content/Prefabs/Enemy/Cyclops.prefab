@@ -1212,17 +1212,17 @@ MonoBehaviour:
   _highlightMaterial: {fileID: 2100000, guid: 366774be727a5f845b1f353b74b4e5e1, type: 2}
   _hitEffects: {fileID: 3819314229922152557}
   Model:
-    Health: 150
-    Damage: 30
-    Regeneration: 10
+    Health: 4901
+    Damage: 762
+    Regeneration: 150
     DelayRegeneration: 1
     RadiusFindPlayer: 8
     DelayAttack: 1.1
     SpeedRotation: 7
-    TimeForAttack: 25
+    TimeForAttack: 60
     DelayDeath: 5
-    Score: 55
-    Money: 35
+    Score: 19409
+    Money: 700
   names:
   - "\u0426\u0438\u043A\u043B\u043E\u043F"
   - Cyclops

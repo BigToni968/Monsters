@@ -132,7 +132,7 @@ MonoBehaviour:
   _typeItems: 2
   Time: 300
   Price: 1000
-  Value: 4
+  Value: 1
   Index: 5
   Image: {fileID: 8652787105943867553}
   ImageBuckGround: {fileID: 8597425749470184526}

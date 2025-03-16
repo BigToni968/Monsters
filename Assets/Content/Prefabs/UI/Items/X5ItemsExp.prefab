@@ -244,7 +244,7 @@ MonoBehaviour:
   _typeItems: 0
   Time: 300
   Price: 1000
-  Value: 4
+  Value: 1
   Index: 4
   Image: {fileID: 4280485793544168953}
   ImageBuckGround: {fileID: 5488674288293595458}

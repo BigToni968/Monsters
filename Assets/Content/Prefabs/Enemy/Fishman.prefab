@@ -1487,17 +1487,17 @@ MonoBehaviour:
   _highlightMaterial: {fileID: 2100000, guid: 366774be727a5f845b1f353b74b4e5e1, type: 2}
   _hitEffects: {fileID: 2714278731746763433}
   Model:
-    Health: 150
-    Damage: 30
-    Regeneration: 10
+    Health: 9908
+    Damage: 1050
+    Regeneration: 300
     DelayRegeneration: 1
-    RadiusFindPlayer: 8
+    RadiusFindPlayer: 9
     DelayAttack: 1.1
     SpeedRotation: 7
-    TimeForAttack: 25
+    TimeForAttack: 150
     DelayDeath: 5
-    Score: 55
-    Money: 35
+    Score: 99610
+    Money: 880
   names:
   - "\u0420\u044B\u0431\u0430 \u043C\u043E\u043D\u0441\u0442\u0440"
   - Monster fish

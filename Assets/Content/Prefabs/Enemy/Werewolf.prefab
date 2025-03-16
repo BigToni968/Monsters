@@ -227,17 +227,17 @@ MonoBehaviour:
   _highlightMaterial: {fileID: 2100000, guid: 366774be727a5f845b1f353b74b4e5e1, type: 2}
   _hitEffects: {fileID: 2288716786680030301}
   Model:
-    Health: 1200
+    Health: 588
     Damage: 80
-    Regeneration: 10
+    Regeneration: 25
     DelayRegeneration: 1
-    RadiusFindPlayer: 6
+    RadiusFindPlayer: 7
     DelayAttack: 1
     SpeedRotation: 7
-    TimeForAttack: 25
+    TimeForAttack: 45
     DelayDeath: 5
-    Score: 200
-    Money: 75
+    Score: 1350
+    Money: 200
   names:
   - "\u0417\u0443\u0431\u0430\u0441\u0442\u044B\u0439 \u0432\u043E\u043B\u043A"
   - Toothy Wolf

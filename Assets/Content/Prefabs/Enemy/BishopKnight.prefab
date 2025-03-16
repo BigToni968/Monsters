@@ -1228,17 +1228,17 @@ MonoBehaviour:
   _highlightMaterial: {fileID: 2100000, guid: 366774be727a5f845b1f353b74b4e5e1, type: 2}
   _hitEffects: {fileID: 1910960257085887911}
   Model:
-    Health: 150
-    Damage: 30
-    Regeneration: 10
+    Health: 12880
+    Damage: 1300
+    Regeneration: 300
     DelayRegeneration: 1
     RadiusFindPlayer: 10
     DelayAttack: 1.1
     SpeedRotation: 7
-    TimeForAttack: 25
+    TimeForAttack: 150
     DelayDeath: 5
-    Score: 55
-    Money: 35
+    Score: 139453
+    Money: 1000
   names:
   - "\u0418\u043D\u043E\u043F\u043B\u0430\u043D\u0435\u0442\u043D\u044B\u0439 \u0440\u044B\u0446\u0430\u0440\u044C"
   - Alien Knight

@@ -100,17 +100,17 @@ MonoBehaviour:
   _highlightMaterial: {fileID: 2100000, guid: 366774be727a5f845b1f353b74b4e5e1, type: 2}
   _hitEffects: {fileID: 5867821453227564996}
   Model:
-    Health: 3000
-    Damage: 160
+    Health: 3750
+    Damage: 200
     Regeneration: 100
     DelayRegeneration: 1
-    RadiusFindPlayer: 15
+    RadiusFindPlayer: 16
     DelayAttack: 1
     SpeedRotation: 7
     TimeForAttack: 40
     DelayDeath: 10
-    Score: 450
-    Money: 200
+    Score: 6750
+    Money: 20
   names:
   - "\u0428\u0430\u043C\u0430\u043D"
   - Shaman

@@ -37,6 +37,8 @@ namespace Assets.Content.Scripts.UI
         [SerializeField] private Transform _unitController;
         [SerializeField] private Canvas[] _allCanvas;
 
+        public Transform ButtonAdsExp;
+        public Transform ButtonAdsDamage;
         public OpenPortal OpenPortal;
         public Slider SliderGoldBuff;
         public Slider SliderExpBuff;
@@ -108,6 +110,10 @@ namespace Assets.Content.Scripts.UI
             YandexGame.savesData.CurrentLevel = CurrentLevel;
             YandexGame.savesData.CurrentScore = CurrentScore;
             YandexGame.savesData.NeedScore = NeedScore;
+            if(YandexGame.savesData.Score < Score)
+            {
+                UpdateLeaderBoard((int)Score);
+            }     
             YandexGame.SaveProgress();
         }
 
@@ -133,8 +139,7 @@ namespace Assets.Content.Scripts.UI
         {
             ChangeMoney(money);
             Score += (score * BuffExp * BuyBuffExp);
-            Score = Mathf.Clamp(Score, 0, _upgradeManager.LevelsData[_upgradeManager.LevelsData.Length - 1].Score);
-
+            Score = Mathf.Clamp(Score, 0, _upgradeManager.LevelsData[_upgradeManager.LevelsData.Length - 1].Score);          
             CurrentScore += (score * BuffExp * BuyBuffExp);
             _upgradeManager.Upgrade();
             SetTextLevel();
@@ -150,8 +155,21 @@ namespace Assets.Content.Scripts.UI
         {
             float percent = CurrentScore == 0 ? 0 : ((CurrentScore / NeedScore)) * 100;
             _scoreText.SetText($"{new IdleCurrency(CurrentScore).ToShortString()}/{new IdleCurrency(NeedScore).ToShortString()} ({Mathf.RoundToInt(percent)}%)");
-            _currentLevelText.SetText($"Уровень {CurrentLevel}");
-            _futureLevelText.SetText($"Уровень {NeedLevel}");
+            if (YandexGame.EnvironmentData.language == "ru")
+            {
+                _currentLevelText.SetText($"Уровень {CurrentLevel}");
+                _futureLevelText.SetText($"Уровень {NeedLevel}");
+            }
+            else if (YandexGame.EnvironmentData.language == "en")
+            {
+                _currentLevelText.SetText($"Level {CurrentLevel}");
+                _futureLevelText.SetText($"Level {NeedLevel}");
+            }
+            else if (YandexGame.EnvironmentData.language == "tr")
+            {
+                _currentLevelText.SetText($"Düzey {CurrentLevel}");
+                _futureLevelText.SetText($"Düzey {NeedLevel}");
+            }        
             _scoreSlider.maxValue = NeedScore;
             _scoreSlider.minValue = 0;
             _scoreSlider.value = CurrentScore;
@@ -251,6 +269,10 @@ namespace Assets.Content.Scripts.UI
         {
             _healthMaxStat.SetText($"{new IdleCurrency(UnitController.Instance.MaxHealthPlayer + UnitController.Instance.HealthPlayerBuff).ToShortString()}");
             _damageMaxStat.SetText($"{new IdleCurrency(UnitController.Instance.DamagePlayerStatic + UnitController.Instance.DamagePlayerBuff).ToShortString()}");
+        }
+        public void UpdateLeaderBoard(int score)
+        {
+            YandexGame.NewLeaderboardScores("LeaderBoardScore", score);
         }
     }
 }

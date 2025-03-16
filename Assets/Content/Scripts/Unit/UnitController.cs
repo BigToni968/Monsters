@@ -265,7 +265,7 @@ namespace Assets.Content.Scripts.Unit
                 var pov = _virtualCamera.AddCinemachineComponent<CinemachinePOV>();
                 pov.m_VerticalAxis.Value = _virtualCamera.transform.eulerAngles.x;
                 pov.m_HorizontalAxis.Value = _virtualCamera.transform.eulerAngles.y;
-                //pov.m_VerticalAxis.m_MinValue = -1f;
+                //pov.m_VerticalAxis.m_MinValue = 0;
                 pov.m_VerticalAxis.m_MaxSpeed = OffsetSpeedCamera.y;
                 pov.m_HorizontalAxis.m_MaxSpeed = OffsetSpeedCamera.x;
             }
@@ -314,7 +314,7 @@ namespace Assets.Content.Scripts.Unit
         }
         private void UpdateHealth()
         {
-            InfoUnit.SetHealth(CurrentHealthPlayer, MaxHealthPlayer);
+            InfoUnit.SetHealth(CurrentHealthPlayer, MaxHealthPlayer + HealthPlayerBuff);
         }
     }
 }

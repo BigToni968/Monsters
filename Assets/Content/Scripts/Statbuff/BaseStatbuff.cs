@@ -18,7 +18,7 @@ namespace Assets.Content.Scripts.Statbuff
         }
         private void OnDestroy()
         {
-            Deactivate();
+           // Deactivate();
         }
         public void SetValue(float newValue)
         {

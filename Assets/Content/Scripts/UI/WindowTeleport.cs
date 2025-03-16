@@ -1,3 +1,5 @@
+using Assets.Content.Scripts.TimeBuff;
+using Assets.Content.Scripts.Unit;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -22,6 +24,10 @@ namespace Assets.Content.Scripts.UI
 
         public void LoadScene(int index)
         {
+            foreach (var item in UnitController.Instance.gameObject.GetComponents<BaseTimeBuff>())
+            {
+                TimerBuff.ItemsTime.Add(item.Type, item.GetTime());
+            }
             SceneManager.LoadScene(index);
         }
 

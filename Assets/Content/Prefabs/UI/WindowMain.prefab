@@ -4307,7 +4307,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
+  m_text: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a2c419de39135a408c3e08c22c553d8, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 95f22954712d7b341985e06eb8d5e1d6, type: 2}
@@ -4393,9 +4393,9 @@ MonoBehaviour:
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
-  ru: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
-  en: Get for an advertisement
-  tr: "Bir reklam i\xE7in al\u0131n"
+  ru: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
+  en: Get for advertising
+  tr: "Reklam i\xE7in al\u0131n"
   az: 
   be: 
   he: 
@@ -7653,7 +7653,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
+  m_text: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a2c419de39135a408c3e08c22c553d8, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 95f22954712d7b341985e06eb8d5e1d6, type: 2}
@@ -7739,9 +7739,9 @@ MonoBehaviour:
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
-  ru: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
-  en: Get for an advertisement
-  tr: "Bir reklam i\xE7in al\u0131n"
+  ru: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
+  en: Get for advertising
+  tr: "Reklam i\xE7in al\u0131n"
   az: 
   be: 
   he: 
@@ -11080,7 +11080,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
+  m_text: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a2c419de39135a408c3e08c22c553d8, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 95f22954712d7b341985e06eb8d5e1d6, type: 2}
@@ -11166,9 +11166,9 @@ MonoBehaviour:
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
-  ru: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
-  en: Get for an advertisement
-  tr: "Bir reklam i\xE7in al\u0131n"
+  ru: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
+  en: Get for advertising
+  tr: "Reklam i\xE7in al\u0131n"
   az: 
   be: 
   he: 
@@ -12181,8 +12181,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2753608821531964653}
   - {fileID: 9062018396769605598}
+  - {fileID: 2753608821531964653}
   - {fileID: 5718822258145571698}
   - {fileID: 4778167537072440214}
   m_Father: {fileID: 4566011661170921931}
@@ -15450,7 +15450,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "X2 \u0443\u0440\u043E\u043D \u043D\u0430 5 \u043C\u0438\u043D\u0443\u0442
-    \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
+    \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a2c419de39135a408c3e08c22c553d8, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 95f22954712d7b341985e06eb8d5e1d6, type: 2}
@@ -15537,7 +15537,7 @@ MonoBehaviour:
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
   ru: "X2 \u0443\u0440\u043E\u043D \u043D\u0430 5 \u043C\u0438\u043D\u0443\u0442
-    \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
+    \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
   en: X2 damage for 5 minutes for advertising
   tr: "Reklam i\xE7in 5 dakika boyunca x2 hasar"
   az: 
@@ -18552,7 +18552,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
+  m_text: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a2c419de39135a408c3e08c22c553d8, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 95f22954712d7b341985e06eb8d5e1d6, type: 2}
@@ -18638,9 +18638,9 @@ MonoBehaviour:
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
-  ru: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
-  en: Get for an advertisement
-  tr: "Bir reklam i\xE7in al\u0131n"
+  ru: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
+  en: Get for advertising
+  tr: "Reklam i\xE7in al\u0131n"
   az: 
   be: 
   he: 
@@ -19189,8 +19189,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5550855511694048966}
   m_HandleRect: {fileID: 2828055576383981541}
   m_Direction: 2
-  m_Value: 1.0000005
-  m_Size: 0.5855272
+  m_Value: 1.0000006
+  m_Size: 0.59328395
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -19594,7 +19594,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
+  m_text: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a2c419de39135a408c3e08c22c553d8, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 95f22954712d7b341985e06eb8d5e1d6, type: 2}
@@ -19680,9 +19680,9 @@ MonoBehaviour:
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
-  ru: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
-  en: Get for an advertisement
-  tr: "Bir reklam i\xE7in al\u0131n"
+  ru: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
+  en: Get for advertising
+  tr: "Reklam i\xE7in al\u0131n"
   az: 
   be: 
   he: 
@@ -22674,7 +22674,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 7246861284136377665}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.6849316
+  m_Size: 0.6849315
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -27725,7 +27725,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "X2 \u043E\u043F\u044B\u0442 \u043D\u0430 5 \u043C\u0438\u043D\u0443\u0442
-    \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
+    \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a2c419de39135a408c3e08c22c553d8, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 95f22954712d7b341985e06eb8d5e1d6, type: 2}
@@ -27812,7 +27812,7 @@ MonoBehaviour:
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
   ru: "X2 \u043E\u043F\u044B\u0442 \u043D\u0430 5 \u043C\u0438\u043D\u0443\u0442
-    \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
+    \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
   en: X2 experience for 5 minutes for advertising
   tr: "Reklam i\xE7in 5 dakika boyunca x2 deneyim"
   az: 
@@ -32021,7 +32021,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
+  m_text: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a2c419de39135a408c3e08c22c553d8, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 95f22954712d7b341985e06eb8d5e1d6, type: 2}
@@ -32107,9 +32107,9 @@ MonoBehaviour:
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
-  ru: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
-  en: Get for an advertisement
-  tr: "Bir reklam i\xE7in al\u0131n"
+  ru: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
+  en: Get for advertising
+  tr: "Reklam i\xE7in al\u0131n"
   az: 
   be: 
   he: 
@@ -32410,7 +32410,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
+  m_text: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a2c419de39135a408c3e08c22c553d8, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 95f22954712d7b341985e06eb8d5e1d6, type: 2}
@@ -32496,9 +32496,9 @@ MonoBehaviour:
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
-  ru: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
-  en: Get for an advertisement
-  tr: "Bir reklam i\xE7in al\u0131n"
+  ru: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
+  en: Get for advertising
+  tr: "Reklam i\xE7in al\u0131n"
   az: 
   be: 
   he: 
@@ -33780,7 +33780,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1dffdce279bf1431986543977a8ad64d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7c5f678a3b28846cebc251906220ae49, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -36003,7 +36003,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
+  m_text: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a2c419de39135a408c3e08c22c553d8, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 95f22954712d7b341985e06eb8d5e1d6, type: 2}
@@ -36089,9 +36089,9 @@ MonoBehaviour:
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
-  ru: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
-  en: Get for an advertisement
-  tr: "Bir reklam i\xE7in al\u0131n"
+  ru: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
+  en: Get for advertising
+  tr: "Reklam i\xE7in al\u0131n"
   az: 
   be: 
   he: 
@@ -45405,7 +45405,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
+  m_text: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a2c419de39135a408c3e08c22c553d8, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 95f22954712d7b341985e06eb8d5e1d6, type: 2}
@@ -45491,9 +45491,9 @@ MonoBehaviour:
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
-  ru: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
-  en: Get for an advertisement
-  tr: "Bir reklam i\xE7in al\u0131n"
+  ru: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
+  en: Get for advertising
+  tr: "Reklam i\xE7in al\u0131n"
   az: 
   be: 
   he: 
@@ -46162,7 +46162,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 53.85
+  m_fontSize: 54
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -47640,6 +47640,8 @@ MonoBehaviour:
   - {fileID: 3469983956274489917}
   - {fileID: 3425486850304876518}
   - {fileID: 5705565986430832454}
+  ButtonAdsExp: {fileID: 410646586561443828}
+  ButtonAdsDamage: {fileID: 6871589946107662481}
   OpenPortal: {fileID: 0}
   SliderGoldBuff: {fileID: 5859761722919061787}
   SliderExpBuff: {fileID: 8830092129395979162}
@@ -49833,7 +49835,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
+  m_text: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a2c419de39135a408c3e08c22c553d8, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 95f22954712d7b341985e06eb8d5e1d6, type: 2}
@@ -49919,9 +49921,9 @@ MonoBehaviour:
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
-  ru: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
-  en: Get for an advertisement
-  tr: "Bir reklam i\xE7in al\u0131n"
+  ru: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
+  en: Get for advertising
+  tr: "Reklam i\xE7in al\u0131n"
   az: 
   be: 
   he: 
@@ -52948,7 +52950,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
+  m_text: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a2c419de39135a408c3e08c22c553d8, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 95f22954712d7b341985e06eb8d5e1d6, type: 2}
@@ -53034,9 +53036,9 @@ MonoBehaviour:
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
-  ru: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
-  en: Get for an advertisement
-  tr: "Bir reklam i\xE7in al\u0131n"
+  ru: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
+  en: Get for advertising
+  tr: "Reklam i\xE7in al\u0131n"
   az: 
   be: 
   he: 
@@ -56772,7 +56774,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1dffdce279bf1431986543977a8ad64d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a255dca1369f64ca8809b555ca9d27ea, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -60176,7 +60178,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
+  m_text: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a2c419de39135a408c3e08c22c553d8, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 95f22954712d7b341985e06eb8d5e1d6, type: 2}
@@ -60262,9 +60264,9 @@ MonoBehaviour:
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
-  ru: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u043C\u0443"
-  en: Get for an advertisement
-  tr: "Bir reklam i\xE7in al\u0131n"
+  ru: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
+  en: Get for advertising
+  tr: "Reklam i\xE7in al\u0131n"
   az: 
   be: 
   he: 

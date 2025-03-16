@@ -1934,17 +1934,17 @@ MonoBehaviour:
   _highlightMaterial: {fileID: 2100000, guid: 366774be727a5f845b1f353b74b4e5e1, type: 2}
   _hitEffects: {fileID: 5133195690558004902}
   Model:
-    Health: 150
-    Damage: 30
-    Regeneration: 10
+    Health: 5504
+    Damage: 600
+    Regeneration: 250
     DelayRegeneration: 1
     RadiusFindPlayer: 8
     DelayAttack: 1.1
     SpeedRotation: 7
-    TimeForAttack: 25
+    TimeForAttack: 120
     DelayDeath: 5
-    Score: 55
-    Money: 35
+    Score: 69173
+    Money: 820
   names:
   - "\u0421\u0430\u043B\u0430\u043C\u0430\u043D\u0434\u0440\u0430"
   - Salamander

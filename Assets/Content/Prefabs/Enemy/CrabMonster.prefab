@@ -1167,17 +1167,17 @@ MonoBehaviour:
   _highlightMaterial: {fileID: 2100000, guid: 366774be727a5f845b1f353b74b4e5e1, type: 2}
   _hitEffects: {fileID: 3084206172347010978}
   Model:
-    Health: 1800
+    Health: 650
     Damage: 110
     Regeneration: 50
     DelayRegeneration: 1
-    RadiusFindPlayer: 6
+    RadiusFindPlayer: 7
     DelayAttack: 1
     SpeedRotation: 7
-    TimeForAttack: 25
+    TimeForAttack: 40
     DelayDeath: 7
-    Score: 300
-    Money: 100
+    Score: 2700
+    Money: 220
   names:
   - "\u041A\u0440\u0430\u0431"
   - Crab

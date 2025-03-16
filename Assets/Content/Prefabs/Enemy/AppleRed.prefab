@@ -108,7 +108,7 @@ MonoBehaviour:
   _highlightMaterial: {fileID: 2100000, guid: 366774be727a5f845b1f353b74b4e5e1, type: 2}
   _hitEffects: {fileID: 2383192476950414753}
   Model:
-    Health: 25
+    Health: 36
     Damage: 0
     Regeneration: 5
     DelayRegeneration: 1
@@ -117,8 +117,8 @@ MonoBehaviour:
     SpeedRotation: 0
     TimeForAttack: 1
     DelayDeath: 5
-    Score: 25
-    Money: 10
+    Score: 38
+    Money: 20
   names:
   - "\u042F\u0431\u043B\u043E\u043A\u043E"
   - Apple
